@@ -1,5 +1,4 @@
 import Menu from "../assets/menu.svg"
-import './Header.css'
 
 function Header() {
     return (
