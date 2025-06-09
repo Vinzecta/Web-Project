@@ -3,6 +3,7 @@ import Footer from "../footer/footer";
 import Banner from "../Banner";
 import Image1 from "../assets/image-1.jpg"
 import Info from "./Info";
+import Hero from "../Hero";
 
 function Contact() {
     const title = "Contact Us!";
@@ -12,6 +13,7 @@ function Contact() {
             <Header/>
             <Banner title={title} content={content} image={Image1} /> 
             <Info/>
+            <Hero/>
             <Footer/>
         </>
     );
