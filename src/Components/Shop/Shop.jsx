@@ -5,6 +5,7 @@ import Image1 from "../../assets/image-1.jpg"
 import Search from "../../assets/search.svg"
 import Rates from "../Rates"
 import Image7 from "../../assets/image-7.jpg"
+import Pagination from "../Pagination";
 
 function Shop() {
     return (
@@ -81,6 +82,8 @@ function Shop() {
                 </div>
             </section>
 
+            <Pagination/>
+            
             <Footer />
         </>
     );
