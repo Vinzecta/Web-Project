@@ -1,8 +1,8 @@
-import Menu from "../assets/menu.svg"
-import Facebook from "../assets/facebook.svg"
-import Twitter from "../assets/twitter.svg"
-import Instagram from "../assets/instagram.svg"
-import Youtube from "../assets/youtube.svg"
+import Menu from "../../assets/menu.svg"
+import Facebook from "../../assets/facebook.svg"
+import Twitter from "../../assets/twitter.svg"
+import Instagram from "../../assets/instagram.svg"
+import Youtube from "../../assets/youtube.svg"
 
 function Footer_Navigation() {
     return (

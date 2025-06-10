@@ -1,6 +1,6 @@
-import Address from "../assets/address.svg"
-import Email from "../assets/gmail.svg"
-import Phone from "../assets/phone.svg"
+import Address from "../../assets/address.svg"
+import Email from "../../assets/gmail.svg"
+import Phone from "../../assets/phone.svg"
 
 function Info() {
     return (

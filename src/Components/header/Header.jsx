@@ -1,4 +1,4 @@
-import Menu from "../assets/menu.svg"
+import Menu from "../../assets/menu.svg"
 
 function Header() {
     return (

@@ -1,5 +1,5 @@
-import Image2 from "../assets/image-2.jpg"
-import Image3 from "../assets/image-3.jpg"
+import Image2 from "../../assets/image-2.jpg"
+import Image3 from "../../assets/image-3.jpg"
 
 function Explore() {
     return (
