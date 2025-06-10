@@ -5,7 +5,7 @@ function Banner ({welcome, title, content, image, button}) {
                 <p>{welcome}</p>
                 <h1 className="text-6xl">{title}</h1>
                 <p className="text-2xl">{content}</p>
-                <button>{button}</button>
+                <button className="border">{button}</button>
             </div>
 
             <div className="mr-20 w-1/2">
