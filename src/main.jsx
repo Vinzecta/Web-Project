@@ -7,9 +7,10 @@ import Contact from './Components/Contact Us/Contact.jsx'
 import Homepage from './Components/Homepage/Homepage.jsx'
 import Shop from './Components/Shop/Shop.jsx'
 import Detail from './Components/Product Detail/Detail.jsx'
+import Cart from './Components/Cart/Cart.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Detail />
+    <Cart />
   </StrictMode>,
 )
