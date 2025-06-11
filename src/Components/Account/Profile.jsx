@@ -57,6 +57,13 @@ function Profile() {
                     <label>Ward</label>
                     <select className="border"></select>
                 </div>
+
+                <div>
+                    <label>Street Address</label>
+                    <input type="text" className="border"></input>
+                </div>
+
+                <button className="border">Save Changes</button>
             </div>
         </form>
     );
