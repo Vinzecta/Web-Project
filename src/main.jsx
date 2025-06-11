@@ -8,9 +8,10 @@ import Homepage from './Components/Homepage/Homepage.jsx'
 import Shop from './Components/Shop/Shop.jsx'
 import Detail from './Components/Product Detail/Detail.jsx'
 import Cart from './Components/Cart/Cart.jsx'
+import Account from "./Components/Account/Account.jsx"
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Cart />
+    <Account />
   </StrictMode>,
 )
