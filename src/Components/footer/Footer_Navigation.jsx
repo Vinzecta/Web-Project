@@ -6,21 +6,21 @@ import Youtube from "../../assets/youtube.svg"
 
 function Footer_Navigation() {
     return (
-            <section className="flex justify-between p-5">
-                <h1 className="text-2xl ml-20 p-5">ShopName</h1>
+            <section className="flex justify-around py-10 bg-[#F1F4F1]">
+                <h1 className="text-xl">ShopName</h1>
     
-                <nav className="flex gap-15 p-5">
-                    <a href="#" className="text-2xl m-auto">Home</a>
-                    <a href='#' className="text-2xl m-auto">About</a>
-                    <a href='#' className="text-2xl m-auto">Shop</a>
-                    <a href='#' className="text-2xl m-auto">Contact</a>
+                <nav className="flex gap-10">
+                    <a href="#" className="text-base">Home</a>
+                    <a href='#' className="text-base">About</a>
+                    <a href='#' className="text-base">Shop</a>
+                    <a href='#' className="text-base">Contact</a>
                 </nav>
     
-                <div className="flex gap-5 mr-20">
-                    <img src={Facebook} alt="Facebook" className="w-10"/>
-                    <img src={Twitter} alt="Twitter" className="w-10"/>
-                    <img src={Instagram} alt="Instagram" className="w-10"/>
-                    <img src={Youtube} alt="Youtube" className="w-10"/>
+                <div className="flex gap-2">
+                    <img src={Facebook} alt="Facebook" className="w-5"/>
+                    <img src={Twitter} alt="Twitter" className="w-5"/>
+                    <img src={Instagram} alt="Instagram" className="w-5"/>
+                    <img src={Youtube} alt="Youtube" className="w-5"/>
                 </div>
             </section>
         );
