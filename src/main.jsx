@@ -10,9 +10,10 @@ import Detail from './Components/Product Detail/Detail.jsx'
 import Cart from './Components/Cart/Cart.jsx'
 import Account from "./Components/Account/Account.jsx"
 import Registeration from './Components/Registeration/Registeration.jsx'
+import Header from './Components/header/Header'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <Registeration />
+    <App />
   </StrictMode>,
 )
