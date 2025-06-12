@@ -3,7 +3,7 @@ import Footer from "../footer/footer";
 import Banner from "../Banner";
 import Image1 from "../../assets/image-1.jpg"
 import Info from "./Info";
-import Hero from "../Hero";
+import Hero from "../Hero/Hero";
 
 function Contact() {
     const title = "Contact Us!";

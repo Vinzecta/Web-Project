@@ -1,6 +1,6 @@
 import Header from "../header/Header";
 import Footer from "../footer/footer";
-import Hero from "../Hero";
+import Hero from "../Hero/Hero";
 import Image1 from "../../assets/image-1.jpg"
 import Search from "../../assets/search.svg"
 import Rates from "../Rates"

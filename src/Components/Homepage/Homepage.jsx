@@ -7,7 +7,7 @@ import Category from "./Category"
 import Popular from "./Popular"
 import Trending from "./Trending"
 import Review from "./Review"
-import Hero from "../Hero"
+import Hero from "../Hero/Hero"
 
 function Homepage() {
     const welcome = "Welcome to ShopName";
