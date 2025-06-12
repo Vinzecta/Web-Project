@@ -1,4 +1,4 @@
-import Banner from "../Banner"
+import Banner from "../Banner/Banner"
 import Header from "../header/Header";
 import Footer from "../footer/footer";
 import Image1 from "../../assets/image-1.jpg"

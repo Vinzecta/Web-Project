@@ -1,6 +1,6 @@
 import Header from "../header/Header"
 import Footer from "../footer/footer"
-import Banner from "../Banner"
+import Banner from "../Banner/Banner"
 import Image from "../../assets/image-1.jpg"
 import Introduction from "./Introduction"
 import Category from "./Category"

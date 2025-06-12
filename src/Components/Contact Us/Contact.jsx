@@ -1,6 +1,6 @@
 import Header from "../header/Header";
 import Footer from "../footer/footer";
-import Banner from "../Banner";
+import Banner from "../Banner/Banner";
 import Image1 from "../../assets/image-1.jpg"
 import Info from "./Info";
 import Hero from "../Hero/Hero";
