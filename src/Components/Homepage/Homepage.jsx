@@ -24,8 +24,8 @@ function Homepage() {
                     image={Image}
                     button={button} />
             <Introduction/>
-            {/* <Category/>
-            <Popular/>
+            <Category/>
+            {/* <Popular/>
             <Trending/>
             <Review/> */}
             <Hero/>
