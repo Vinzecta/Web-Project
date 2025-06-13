@@ -8,12 +8,13 @@ import Popular from "./Popular"
 import Trending from "./Trending"
 import Review from "./Review"
 import Hero from "../Hero/Hero"
+import "./Homepage.css"
 
 function Homepage() {
-    const welcome = "Welcome to ShopName";
-    const title = "Work smarter. Achieve more.";
-    const content = "Starting from just 1$";
-    const button = "Shop now!";
+    const welcome = "WELCOME TO CERAMIC SHOP";
+    const title = "Elevate Your Space with Ceramic Elegance";
+    const content = "Starting from just $149.00";
+    const button = "SHOP NOW!";
     return (
         <>
             <Header/>

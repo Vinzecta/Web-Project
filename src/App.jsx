@@ -7,19 +7,12 @@ import Footer from './Components/footer/footer'
 import Hero from "./Components/Hero/Hero"
 import Banner from "./Components/Banner/Banner"
 import Image1 from "./assets/image-1.jpg"
+import Homepage from "./Components/Homepage/Homepage"
 
 function App() {
   return (
     <>
-      <Header />
-      <Banner welcome={"WELCOME TO CERAMIC SHOP"} 
-              title={"Evaluate your space with Ceramic Elegence"}
-              content={"Starting from just $149.00"}
-              image={Image1}
-              button={"SHOP NOW!"}
-              />
-      <Hero />
-      <Footer />
+      <Homepage />
     </>
   )
 }
