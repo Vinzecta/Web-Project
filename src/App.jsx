@@ -12,11 +12,11 @@ function App() {
   return (
     <>
       <Header />
-      <Banner welcome={"Welcome to Ceramic Shop"} 
+      <Banner welcome={"WELCOME TO CERAMIC SHOP"} 
               title={"Evaluate your space with Ceramic Elegence"}
               content={"Starting from just $149.00"}
               image={Image1}
-              button={"Shop Now!"}
+              button={"SHOP NOW!"}
               />
       <Hero />
       <Footer />
