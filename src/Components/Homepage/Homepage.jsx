@@ -24,10 +24,10 @@ function Homepage() {
                     image={Image}
                     button={button} />
             <Introduction/>
-            <Category/>
+            {/* <Category/>
             <Popular/>
             <Trending/>
-            <Review/>
+            <Review/> */}
             <Hero/>
             <Footer/>
         </>
