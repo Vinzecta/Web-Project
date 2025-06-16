@@ -2,11 +2,11 @@ import Image7 from "../../assets/image-7.jpg"
 import Rates from "../Rates"
 import "./Popular.css"
 
-function Popular() {
+function Popular({sub_title, title}) {
     return (
         <section className="mt-10 flex flex-col gap-5 w-[80%] mx-auto">
-            <p className="text-sm" id="most-popular">MOST POPULAR</p>
-            <h1 className="text-5xl w-[80%]" id="popular-title">Discover the Latest Additions at Your Top Choice Flower Shop</h1>
+            <p className="text-sm" id="most-popular">{sub_title}</p>
+            <h1 className="text-5xl w-[80%]" id="popular-title">{title}</h1>
 
             {/* Category Display */}
             <div className="flex flex-wrap justify-between">

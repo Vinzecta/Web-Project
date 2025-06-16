@@ -5,7 +5,6 @@ import Image from "../../assets/image-1.jpg"
 import Introduction from "./Introduction"
 import Category from "./Category"
 import Popular from "./Popular"
-import Trending from "./Trending"
 import Review from "./Review"
 import Hero from "../Hero/Hero"
 import "./Homepage.css"
@@ -25,9 +24,9 @@ function Homepage() {
                     button={button} />
             <Introduction/>
             <Category/>
-            <Popular/>
-            {/* <Trending/>
-            <Review/> */}
+            <Popular sub_title="MOST POPULAR" title="Discover the Latest Additions at Your Top Choice Flower Shop"/>
+            <Popular sub_title="TRENDING NOW" title="Minimalist Ceramic Designs" />
+            {/* <Review/> */}
             <Hero/>
             <Footer/>
         </>
