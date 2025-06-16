@@ -9,6 +9,7 @@ function Rates() {
   return (
         <Box sx={{ '& > legend': { mt: 2 } }}>
         <Rating
+            className="custom-rating"
             name="simple-controlled"
             value={value}
             onChange={(event, newValue) => {

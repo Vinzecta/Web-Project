@@ -1,60 +1,61 @@
 import Image7 from "../../assets/image-7.jpg"
 import Rates from "../Rates"
+import "./Popular.css"
 
 function Popular() {
     return (
         <section className="mt-10 flex flex-col gap-5 w-[80%] mx-auto">
-            <p className="text-sm">MOST POPULAR</p>
-            <h1 className="text-5xl w-[80%]">Discover the Latest Additions at Your Top Choice Flower Shop</h1>
+            <p className="text-sm" id="most-popular">MOST POPULAR</p>
+            <h1 className="text-5xl w-[80%]" id="popular-title">Discover the Latest Additions at Your Top Choice Flower Shop</h1>
 
             {/* Category Display */}
-            <div className="flex flex-wrap gap-10">
-                <div className="w-[30%]">
+            <div className="flex flex-wrap justify-between">
+                <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
+                    <img src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
+                    <p className="text-xs category">Ceramic</p>
+                    <h4 className="text-[22px] product">Ceramic Cup</h4>
+                    <Rates/>
+                    <p className="text-lg price"><span className="line-through text-lg price">$100</span> $99</p>
+                </div>
+
+                <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
+                    <img src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
+                    <p className="text-xs category">Ceramic</p>
+                    <h4 className="text-[22px] product">Ceramic Cup</h4>
+                    <Rates/>
+                    <p className="text-lg price"><span className="line-through text-lg price">$100</span> $99</p>
+                </div>
+
+                <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
+                    <img src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
+                    <p className="text-xs category">Ceramic</p>
+                    <h4 className="text-[22px] product">Ceramic Cup</h4>
+                    <Rates/>
+                    <p className="text-lg price"><span className="line-through text-lg price">$100</span> $99</p>
+                </div>
+
+                <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
+                    <img src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
+                    <p className="text-xs category">Ceramic</p>
+                    <h4 className="text-[22px] product">Ceramic Cup</h4>
+                    <Rates/>
+                    <p className="text-lg price"><span className="line-through text-lg price">$100</span> $99</p>
+                </div>
+
+                <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
+                    <img src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
+                    <p className="text-xs category">Ceramic</p>
+                    <h4 className="text-[22px] product">Ceramic Cup</h4>
+                    <Rates/>
+                    <p className="text-lg price"><span className="line-through text-lg price">$100</span> $99</p>
+                </div>
+
+                <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
                     <img src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
                     <p className="text-xs">Ceramic</p>
-                    <h4 className="text-[22px]">Ceramic Cup</h4>
+                    <h4 className="text-[22px] product">Ceramic Cup</h4>
                     <Rates/>
-                    <p className="text-lg"><span className="line-through text-lg">$100</span> $99</p>
-                </div>
-
-                <div className="w-[30%]">
-                    <img src={Image7} alt="Image 7"/>
-                    <p className="text-xs">Ceramic</p>
-                    <h4 className="text-[22px]">Ceramic Cup</h4>
-                    <Rates/>
-                    <p className="text-lg"><span className="line-through text-lg">$100</span> $99</p>
-                </div>
-
-                <div>
-                    <img src={Image7} alt="Image 7"/>
-                    <p className="text-xs">Ceramic</p>
-                    <h4 className="text-[22px]">Ceramic Cup</h4>
-                    <Rates/>
-                    <p className="text-lg"><span className="line-through text-lg">$100</span> $99</p>
-                </div>
-
-                <div>
-                    <img src={Image7} alt="Image 7"/>
-                    <p className="text-xs">Ceramic</p>
-                    <h4 className="text-[22px]">Ceramic Cup</h4>
-                    <Rates/>
-                    <p className="text-lg"><span className="line-through text-lg">$100</span> $99</p>
-                </div>
-
-                <div>
-                    <img src={Image7} alt="Image 7"/>
-                    <p className="text-xs">Ceramic</p>
-                    <h4 className="text-[22px]">Ceramic Cup</h4>
-                    <Rates/>
-                    <p className="text-lg"><span className="line-through text-lg">$100</span> $99</p>
-                </div>
-
-                <div>
-                    <img src={Image7} alt="Image 7"/>
-                    <p className="text-xs">Ceramic</p>
-                    <h4 className="text-[22px]">Ceramic Cup</h4>
-                    <Rates/>
-                    <p className="text-lg"><span className="line-through text-lg">$100</span> $99</p>
+                    <p className="text-lg price"><span className="line-through text-lg price">$100</span> $99</p>
                 </div>
             </div>
         </section>

@@ -1,0 +1,26 @@
+@media screen and (max-width: 600px) {
+    #most-popular {
+        font-size: 12px;
+    }
+
+    #popular-title {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .product {
+        font-size: 20px;
+    }
+
+    .custom-rating {
+        font-size: 20px;
+    }
+
+    .price {
+        font-size: 16px;
+    }
+
+    .product-container {
+        width: 48%;
+    }
+}
