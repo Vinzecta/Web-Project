@@ -26,7 +26,7 @@ function Homepage() {
             <Category/>
             <Popular sub_title="MOST POPULAR" title="Discover the Latest Additions at Your Top Choice Flower Shop"/>
             <Popular sub_title="TRENDING NOW" title="Minimalist Ceramic Designs" />
-            {/* <Review/> */}
+            <Review/>
             <Hero/>
             <Footer/>
         </>
