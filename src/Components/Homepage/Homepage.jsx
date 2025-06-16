@@ -25,8 +25,8 @@ function Homepage() {
                     button={button} />
             <Introduction/>
             <Category/>
-            {/* <Popular/>
-            <Trending/>
+            <Popular/>
+            {/* <Trending/>
             <Review/> */}
             <Hero/>
             <Footer/>
