@@ -15,8 +15,8 @@ function About() {
                     content={about_content}
                     image={Image1}/>
             <Story/>
-            {/* <Explore/>
-            <Goal/> */}
+            <Explore/>
+            {/* <Goal/> */}
             <Footer/>
         </>
     );
