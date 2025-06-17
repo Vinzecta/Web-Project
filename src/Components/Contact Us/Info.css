@@ -1,0 +1,57 @@
+@media screen and (max-width: 900px) {
+    #info-title {
+        font-size: 30px;
+    }
+
+    #info-content {
+        font-size: 14px;
+    }
+
+    .info {
+        font-size: 12px;
+    }
+
+    .detail {
+        font-size: 14px;
+    }
+
+    .contact-info {
+        font-size: 14px;
+    }
+
+    #submit {
+        font-size: 14px;
+    }
+
+    #info-section {
+        flex-direction: column;
+    }
+
+    #left {
+        width: 100%;
+    }
+
+    #right {
+        width: 100%;
+    }
+
+    #name-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .name-detail {
+        width: 100%;
+    }
+
+    #submit {
+        width: 40%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 901px) and (max-width: 1024px) {
+    #map {
+        height: 300px;
+    }
+}

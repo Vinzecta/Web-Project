@@ -9,11 +9,12 @@ import Banner from "./Components/Banner/Banner"
 import Image1 from "./assets/image-1.jpg"
 import Homepage from "./Components/Homepage/Homepage"
 import About from "./Components/About Us/About"
+import Contact from "./Components/Contact Us/Contact"
 
 function App() {
   return (
     <>
-      <About />
+      <Contact />
     </>
   )
 }
