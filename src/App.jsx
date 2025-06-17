@@ -8,11 +8,12 @@ import Hero from "./Components/Hero/Hero"
 import Banner from "./Components/Banner/Banner"
 import Image1 from "./assets/image-1.jpg"
 import Homepage from "./Components/Homepage/Homepage"
+import About from "./Components/About Us/About"
 
 function App() {
   return (
     <>
-      <Homepage />
+      <About />
     </>
   )
 }

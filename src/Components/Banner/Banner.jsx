@@ -7,7 +7,7 @@ function Banner ({welcome, title, content, image, button}) {
                 <p className="text-sm text-white banner-p">{welcome}</p>
                 <h1 className="text-6xl text-white w-[50%]" id="banner-h1">{title}</h1>
                 <p className="text-2xl text-white banner-p">{content}</p>
-                <button className="text-base text-white w-fit py-[10px] px-[30px] border border-white banner-p">{button}</button>
+                {button ? <button className="text-base text-white w-fit py-[10px] px-[30px] border border-white banner-p">{button}</button> : undefined}
             </div>
 
             <div className="w-fit relative right-14" id="banner-right">
