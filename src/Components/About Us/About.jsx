@@ -5,6 +5,7 @@ import Image1 from "../../assets/image-1.jpg"
 import Story from "./Story"
 import Explore from "./Explore"
 import Goal from "./Goal"
+import Hero from "../Hero/Hero"
 
 function About() {
     const about_content = "At [Shop Name], we offer quality [products/services] with reliable service and fair prices. Proudly serving [your market or location], we're here to help you find what you need—quickly and easily."
@@ -16,7 +17,8 @@ function About() {
                     image={Image1}/>
             <Story/>
             <Explore/>
-            {/* <Goal/> */}
+            <Goal/>
+            <Hero />
             <Footer/>
         </>
     );

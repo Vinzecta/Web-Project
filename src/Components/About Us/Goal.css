@@ -1,0 +1,21 @@
+@media screen and (max-width: 600px) {
+    .goal-title {
+        font-size: 24px;
+    }
+
+    .goal-content {
+        font-size: 14px;
+    }
+
+    #goal-section {
+        flex-direction: column;
+    }
+
+    #vision {
+        width: 100%;
+    }
+
+    #goal {
+        width: 100%;
+    }
+}
