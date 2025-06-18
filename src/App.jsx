@@ -10,11 +10,12 @@ import Image1 from "./assets/image-1.jpg"
 import Homepage from "./Components/Homepage/Homepage"
 import About from "./Components/About Us/About"
 import Contact from "./Components/Contact Us/Contact"
+import Shop from './Components/Shop/Shop'
 
 function App() {
   return (
     <>
-      <Contact />
+      <Shop />
     </>
   )
 }

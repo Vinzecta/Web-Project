@@ -1,9 +1,9 @@
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
-function Pagination() {
+function Pagination({className}) {
     return (
-        <section>
+        <section className={className}>
             <ArrowBackIcon/>
             <ArrowForwardIcon />
         </section>
