@@ -11,11 +11,12 @@ import Homepage from "./Components/Homepage/Homepage"
 import About from "./Components/About Us/About"
 import Contact from "./Components/Contact Us/Contact"
 import Shop from './Components/Shop/Shop'
+import Detail from './Components/Product Detail/Detail'
 
 function App() {
   return (
     <>
-      <Shop />
+      <Detail />
     </>
   )
 }

@@ -9,8 +9,8 @@ function Detail() {
         <>
             <Header />
             <Product_Detail />
-            <Description_And_Review />
-            <Related />
+            {/* <Description_And_Review />
+            <Related /> */}
             <Footer />
         </>
     );
