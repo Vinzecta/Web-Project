@@ -1,0 +1,50 @@
+@media screen and (max-width: 1024px) {
+    #detail-section {
+        flex-direction: column;
+    }
+
+    #image-container {
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+
+    #small-image-container {
+        flex-direction: row;
+        margin: 0 auto
+    }
+
+    #small-image-container img {
+        width: 80px;
+    }
+
+    #info-container {
+        width: 100%;
+    }
+
+    #product-category {
+        font-size: 14px;
+    }
+
+    #product-name {
+        font-size: 30px;
+    }
+
+    #price {
+        font-size: 20px;
+    }
+
+    #description {
+        font-size: 14px;
+    }
+
+    #quantity {
+        flex-direction: column;
+        gap: 15px
+    }
+
+    #category {
+        font-size: 12px;
+    }
+}
+
