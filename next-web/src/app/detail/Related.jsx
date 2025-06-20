@@ -1,6 +1,6 @@
 // Related Product Section
-import Image7 from "../../assets/image-7.jpg"
-import Rates from "../rates";
+import Image7 from "../../../public/image-7.jpg"
+import Rates from "../rates/Rates";
 import Image from "next/image";
 
 function Related() {

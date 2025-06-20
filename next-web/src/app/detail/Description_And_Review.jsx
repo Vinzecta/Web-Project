@@ -1,7 +1,10 @@
-import Rates from "../rates"
-import Avatar from "../../assets/avatar.jpg"
+"use client";
+
+import Rates from "../rates/Rates"
+import Avatar from "../../../public/avatar.jpg"
 import { useState } from "react";
 import Image from "next/image";
+import "./Description_And_Review.css"
 
 function Description_And_Review() {
     const [change, setChange] = useState(false);
@@ -18,18 +21,18 @@ function Description_And_Review() {
     return (
         <section className="w-[80%] mx-auto mt-10">
             <div className="border-t flex gap-10">
-                <button className={`text-base ${!change ? 'border-t-3 border-t-[#C25C5C]' : ''}`} onClick={changeToDescription}>Description</button>
-                <button className={`text-base ${change ? 'border-t-3 border-t-[#C25C5C]' : ''}`} onClick={changeToReview}>Review</button>
+                <button className={`text-base ${!change ? 'border-t-3 border-t-[#C25C5C]' : ''}`} onClick={changeToDescription} id="description">Description</button>
+                <button className={`text-base ${change ? 'border-t-3 border-t-[#C25C5C]' : ''}`} onClick={changeToReview} id="review">Review</button>
             </div>
 
             {!change ? <div className="mt-5">
-                            <p className="text-base">Discover the beauty of ceramics with our handcrafted. This exquisite piece combines artistry and function, making it a versatile addition to any space. Whether used as a decorative accent or a practical item, this ceramic creation adds a touch of elegance to your surroundings.</p>
+                            <p className="text-base" id="description-content">Discover the beauty of ceramics with our handcrafted. This exquisite piece combines artistry and function, making it a versatile addition to any space. Whether used as a decorative accent or a practical item, this ceramic creation adds a touch of elegance to your surroundings.</p>
                        </div> : 
 
                        <>
                             <div className="mt-5 flex flex-col gap-5">
                                 <div className="flex gap-5 p-5 rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                                    <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full"/>
+                                    <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full avatar"/>
 
                                     <div className="flex flex-col gap-2">
                                         <Rates />
@@ -38,7 +41,7 @@ function Description_And_Review() {
                                 </div>
 
                                 <div className="flex gap-5 p-5 rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                                    <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full"/>
+                                    <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full avatar"/>
 
                                     <div className="flex flex-col gap-2">
                                         <Rates />
@@ -47,7 +50,7 @@ function Description_And_Review() {
                                 </div>
 
                                 <div className="flex gap-5 p-5 rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                                    <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full"/>
+                                    <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full avatar"/>
 
                                     <div className="flex flex-col gap-2">
                                         <Rates />
@@ -56,7 +59,7 @@ function Description_And_Review() {
                                 </div>
 
                                 <div className="flex gap-5 p-5 rounded-2xl shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
-                                    <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full"/>
+                                    <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full avatar"/>
 
                                     <div className="flex flex-col gap-2">
                                         <Rates />
@@ -64,7 +67,7 @@ function Description_And_Review() {
                                     </div>
                                 </div>
 
-                                <button type="submit" className="border text-base w-[10%] py-3 border-[#C25C5C] text-[#C25C5C] rounded-3xl mx-auto" id="submit">Load More</button>
+                                <button className="border text-base w-[10%] py-3 border-[#C25C5C] text-[#C25C5C] rounded-3xl mx-auto" id="load-more">Load More</button>
                             </div>
                             
                             <form className="mt-10 p-10 flex flex-col gap-5 border border-gray-300 border-opacity-50">

@@ -1,5 +1,5 @@
-import Image7 from "../../assets/image-7.jpg"
-import Counter from "../counter";
+import Image7 from "../../../public/image-7.jpg"
+import Counter from "../counter/Counter";
 import "./Product_Detail.css"
 import Image from "next/image";
 

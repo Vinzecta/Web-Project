@@ -1,0 +1,22 @@
+@media screen and (max-width: 600px) {
+    #load-more {
+        width: 50%;
+    }
+
+    #description {
+        font-size: 14px;
+    }
+
+    #review {
+        font-size: 14px;
+    }
+
+    #description-content {
+        font-size: 14px;
+    }
+
+    .avatar {
+        width: 52px;
+        height: 52px;
+    }
+}
