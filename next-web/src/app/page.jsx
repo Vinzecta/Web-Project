@@ -8,6 +8,7 @@ import Popular from "./home/Popular"
 import Review from "./home/Review"
 import Hero from "./hero/Hero"
 import "./home/Homepage.css"
+import Link from "next/link"
 
 function Homepage() {
     const welcome = "WELCOME TO CERAMIC SHOP";
@@ -21,7 +22,8 @@ function Homepage() {
                     title={title}
                     content={content}
                     image={Image}
-                    button={button} />
+                    button={button}
+                    navigation="/shop" />
             <Introduction/>
             <Category/>
             <Popular sub_title="MOST POPULAR" title="Discover the Latest Additions at Your Top Choice Flower Shop"/>

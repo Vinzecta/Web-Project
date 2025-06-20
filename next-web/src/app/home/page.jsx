@@ -21,7 +21,8 @@ function Homepage() {
                     title={title}
                     content={content}
                     image={Image}
-                    button={button} />
+                    button={button}
+                    navigation="/shop" />
             <Introduction/>
             <Category/>
             <Popular sub_title="MOST POPULAR" title="Discover the Latest Additions at Your Top Choice Flower Shop"/>

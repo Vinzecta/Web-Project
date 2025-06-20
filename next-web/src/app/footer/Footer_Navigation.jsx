@@ -4,6 +4,7 @@ import Twitter from "../../../public/twitter.svg"
 import Instagram from "../../../public/instagram.svg"
 import Youtube from "../../../public/youtube.svg"
 import Image from "next/image"
+import Link from "next/link"
 
 function Footer_Navigation() {
     return (
@@ -11,10 +12,10 @@ function Footer_Navigation() {
                 <h1 className="text-xl">ShopName</h1>
     
                 <nav className="flex gap-10" id="footer-navi">
-                    <a href="#" className="text-base">Home</a>
-                    <a href='#' className="text-base">About</a>
-                    <a href='#' className="text-base">Shop</a>
-                    <a href='#' className="text-base">Contact</a>
+                    <Link href="/home" className="text-base">Home</Link>
+                    <Link href='/about' className="text-base">About</Link>
+                    <Link href='/shop' className="text-base">Shop</Link>
+                    <Link href='/contact' className="text-base">Contact</Link>
                 </nav>
     
                 <div className="flex gap-2" id="social-media">
