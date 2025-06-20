@@ -1,0 +1,29 @@
+@media screen and (max-width: 600px) {
+    #testimonial {
+        font-size: 12px;
+    }
+
+    #review-title {
+        font-size: 30px;
+    }
+
+    .custom-rating {
+        font-size: 20px;
+    }
+
+    .review {
+        font-size: 15px;
+    }
+
+    .username {
+        font-size: 14px;
+    }
+
+    .role {
+        font-size: 12px;
+    }
+
+    .review-container {
+        width: 100%;
+    }
+}

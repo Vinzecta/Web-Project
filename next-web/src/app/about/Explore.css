@@ -1,0 +1,30 @@
+@media screen and (max-width: 600px) {
+    #journey {
+        font-size: 12px;
+    }
+
+    #journey-title {
+        font-size: 30px;
+    }
+
+    .journey-title {
+        font-size: 14px;
+    }
+
+    #journey-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #journey-top {
+        width: 100%;
+    }
+
+    #journey-bottom {
+        width: 100%;
+    }
+
+    #journey-first {
+        height: 100%;
+    }
+}

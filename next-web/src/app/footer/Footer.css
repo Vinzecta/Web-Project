@@ -1,0 +1,33 @@
+@media screen and (max-width: 500px) {
+    #footer-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #footer-navi {
+        margin-top: 5%;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #social-media {
+        margin-top: 5%;
+    }
+
+    #copy-rights {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #copy-rights p {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #copy-rights p {
+        margin: 0;
+    }
+}

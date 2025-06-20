@@ -1,0 +1,29 @@
+@media screen and (max-width: 500px) {
+    #navigation {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    #shop-name {
+        padding: 20px 10px;
+        margin-left: 15px;
+    }
+    
+    #menu {
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #navigation {
+        background-color: #C25C5C;
+        gap: 0;
+    }
+    
+    #menu {
+        background-color: #C25C5C; 
+    }
+}

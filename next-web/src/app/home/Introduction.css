@@ -1,0 +1,42 @@
+@media screen and (max-width: 750px) {
+    #introduction-section {
+        margin-left: 5%;
+        width: 90%;
+    }
+    
+    #image-intro {
+        flex-direction: column;
+    }
+
+    #image-intro img {
+        width: 100%;
+    }
+
+    #introduction-section h2 {
+        font-size: 30px;
+        width: 100%;
+    }
+
+    #right-intro h3 {
+        font-size: 18px;
+    }
+
+    #right-intro{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    #introduction-section {
+        margin-left: 3%;
+        width: 94%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #introduction-section {
+        margin-left: 6.75%;
+        width: 87%;
+    }
+}
+

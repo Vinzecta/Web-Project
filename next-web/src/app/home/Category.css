@@ -1,0 +1,45 @@
+@media screen and (max-width: 600px) {
+    #left-side h2 {
+        font-size: 30px;
+    }
+
+    #left-side p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    #best-ceramic {
+        font-size: 12px;
+    }
+
+    .category-name {
+        font-size: 18px !important;
+    }
+
+    #category-container {
+        flex-direction: column;
+    }
+
+    .category-section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+     #left-side h2 {
+        font-size: 34px;
+    }
+
+    #left-side p {
+        font-size: 14px;
+        width: 100%;
+    }
+
+    #best-ceramic {
+        font-size: 12px;
+    }
+
+    .category-name {
+        font-size: 18px !important;
+    }
+}
