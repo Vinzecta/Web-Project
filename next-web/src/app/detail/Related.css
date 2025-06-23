@@ -1,0 +1,7 @@
+@import url("../home/Popular.css");
+
+@media screen and (max-width: 600px) {
+    #related-product {
+        font-size: 30px;
+    }
+}
