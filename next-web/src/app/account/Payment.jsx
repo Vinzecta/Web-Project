@@ -1,6 +1,6 @@
-import Momo from "../../assets/momo.svg"
-import Zalopay from "../../assets/zalopay.svg"
-import Paypal from "../../assets/paypal.svg"
+import Momo from "../../../public/momo.svg"
+import Zalopay from "../../../public/zalopay.svg"
+import Paypal from "../../../public/paypal.svg"
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
 import Image from "next/image";
 

@@ -1,7 +1,7 @@
 // Account Section
 
 import Header from "../header/Header";
-import Footer from "../footer/footer";
+import Footer from "../footer/Footer";
 import History from "./History";
 import Payment from "./Payment";
 import Profile from "./Profile";

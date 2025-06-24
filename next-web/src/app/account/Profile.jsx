@@ -1,5 +1,5 @@
 // Profile Section
-import Avatar from "../../assets/avatar.jpg"
+import Avatar from "../../../public/avatar.jpg"
 import Image from "next/image";
 
 function Profile() {
