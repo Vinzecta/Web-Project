@@ -1,0 +1,42 @@
+@media screen and (max-width: 600px) {
+    #billing-detail {
+        font-size: 30px;
+    }
+
+    #paid-logo {
+        width: 30px;
+    }
+
+    .bill-title {
+        font-size: 18px;
+    }
+
+    .bill-card {
+        padding: 20px;
+    }
+
+    #coupon {
+        flex-direction: column;
+    }
+
+    #coupon button {
+        width: 40%;
+        padding: 0;
+        padding: 10px 0;
+    }
+
+    .payment-button {
+        width: 100%;
+        padding: 0;
+    }
+
+    .payment-button button {
+        justify-content: left;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    #more-method {
+        width: 100%;
+    }
+}

@@ -12,7 +12,7 @@ function Cart() {
             <Header />
 
             <h1 className="text-[32px] w-[80%] mx-auto mt-10">Cart</h1>
-            <Order_Detail />
+            {/* <Order_Detail /> */}
             <Price_Summary />
             <Footer />
         </>

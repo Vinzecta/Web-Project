@@ -1,7 +1,7 @@
 import Counter from "../counter/Counter";
-import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import Image7 from "../../../public/image-7.jpg";
 import Image from "next/image";
+import Cancel from "../../../public/cancel.svg"
 
 function Order_Detail() {
     return (
@@ -19,7 +19,7 @@ function Order_Detail() {
                 </thead>
                 <tbody className="border border-gray-300 border-opacity-50">
                     <tr>
-                        <td className="p-2"><HighlightOffIcon /></td>
+                        <td className="p-2"><Image src={Cancel} alt="Cancel" className="w-[16px]"/></td>
                         <td className="p-2"> <Image src={Image7} alt="Image 7" className="w-auto h-20 object-contain" /></td>
                         <td className="px-20">Ceramic Plant Pot</td>
                         <td className="px-20">$99</td>
@@ -30,7 +30,7 @@ function Order_Detail() {
 
                 <tbody className="border border-gray-300 border-opacity-50">
                     <tr>
-                        <td className="p-2"><HighlightOffIcon /></td>
+                        <td className="p-2"><Image src={Cancel} alt="Cancel" className="w-[16px]"/></td>
                         <td className="p-2"> <Image src={Image7} alt="Image 7" className="w-auto h-20 object-contain" /></td>
                         <td className="px-20">Ceramic Plant Pot</td>
                         <td className="px-20">$99</td>
@@ -41,7 +41,7 @@ function Order_Detail() {
 
                 <tbody className="border border-gray-300 border-opacity-50">
                     <tr>
-                        <td className="p-2"><HighlightOffIcon /></td>
+                        <td className="p-2"><Image src={Cancel} alt="Cancel" className="w-[16px]"/></td>
                         <td className="p-2"> <Image src={Image7} alt="Image 7" className="w-auto h-20 object-contain" /></td>
                         <td className="px-20">Ceramic Plant Pot</td>
                         <td className="px-20">$99</td>
