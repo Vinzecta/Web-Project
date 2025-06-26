@@ -1,7 +1,7 @@
 function History() {
     return (
-        <section>
-            <h2>Purchase History</h2>
+        <section className="w-[60%] mt-5 p-5 flex flex-col gap-5 rounded-2xl border border-gray-300 border-opacity-50 mb-10">
+            <h2 className="text-[25px] pb-3 border-b">Purchase History</h2>
 
             <table>
                 <thead>
