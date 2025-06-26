@@ -4,11 +4,11 @@ import Image from "next/image";
 
 function Counter({ ...props }) {
     return (
-        <div className="flex items-center w-fit h-fit" {...props}>
+        <div {...props}>
             <div className="border border-gray-300 border-opacity-50 p-2">
                 <Image src={Minus} alt="Minus Icon" className="w-4 h-4 object-contain" />
             </div>
-            <p className="px-4 flex items-center justify-center border border-gray-300 border-opacity-50 text-base">
+            <p className="px-4 py-1 flex items-center justify-center border border-gray-300 border-opacity-50 text-base">
                 1
             </p>
             <div className="border border-gray-300 border-opacity-50 p-2">
