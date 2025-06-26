@@ -1,0 +1,9 @@
+@media screen and (max-width: 600px){
+    #big-screen-section {
+        display: none;
+    }
+
+    #small-screen-section {
+        display: block;
+    }
+}

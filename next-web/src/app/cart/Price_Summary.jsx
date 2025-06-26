@@ -74,7 +74,7 @@ export default function Price_Summary() {
                 <button className="py-5 w-[50%] mx-auto rounded-3xl border border-[#C25C5C] text-[#C25C5C]" id="more-method">Add more payment method</button>
             </div>
 
-            <button className="mt-10 py-5 w-[100%] mx-auto rounded-3xl border border-[#C25C5C] text-[#C25C5C]">Place Order $1001</button>
+            <button className="mt-10 py-5 w-[100%] mx-auto rounded-3xl border border-[#C25C5C] text-[#C25C5C] mb-10">Place Order $1001</button>
         </section>
     );
 }
