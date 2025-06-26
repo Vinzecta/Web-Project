@@ -1,4 +1,5 @@
 // Account Section
+"use client"
 
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
@@ -12,47 +13,49 @@ import Password from "../../../public/password.svg"
 import Card from "../../../public/card.svg"
 import Purchase from "../../../public/history.svg"
 import Avatar from "../../../public/avatar.jpg"
+import { useState } from "react";
+import "./page.css"
 
 function Account() {
     return (
         <>
             <Header />
 
-            <h1 className="w-[80%] mx-auto mt-10 text-[32px] pb-3 border-b">Account</h1>
-            <section className="w-[80%] mx-auto mt-10 flex justify-between mb-10">
-                <div className="mt-5 flex flex-col gap-5 w-[30%]">
+            <h1 className="w-[80%] mx-auto mt-10 text-[32px] pb-3 border-b" id="account">Account</h1>
+            <section className="w-[80%] mx-auto mt-10 flex justify-between mb-10" id="page-section">
+                <div className="mt-5 flex flex-col gap-5 w-[30%]" id="select-section">
                     <div className="flex gap-2">
                         <Image src={Avatar} alt="Avatar" className="w-[50px] rounded-full" />
                         <div className="my-auto">
-                            <p className="text-base">Username</p>
-                            <p className="text-[10px]">Username@gmail.com</p>
+                            <p className="text-base" id="username">Username</p>
+                            <p className="text-[10px]" id="gmail">Username@gmail.com</p>
                         </div>
                     </div>
                     <div className="flex gap-2 pb-3 border-b border-gray-300 border-opacity-50">
                         <Image src={User} alt="User" />
-                        <p className="text-[20px]">Profile Information</p>
+                        <p className="text-[20px] option-text">Profile Information</p>
                     </div>
 
                     <div className="flex gap-2 pb-3 border-b border-gray-300 border-opacity-50">
                         <Image src={Password} alt="Password" className="w-[20px]"/>
-                        <button className="text-[20px]">Reset Password</button>
+                        <button className="text-[20px] option-text">Reset Password</button>
                     </div>
 
                     <div className="flex gap-2 pb-3 border-b border-gray-300 border-opacity-50">
                         <Image src={Card} alt="Card" className="w-[20px]" />
-                        <button className="text-[20px]">Payment Methods</button>
+                        <button className="text-[20px] option-text">Payment Methods</button>
                     </div>
 
                     <div className="flex gap-2 pb-3 border-b border-gray-300 border-opacity-50">
                         <Image src={Purchase} alt="History" className="w-[20px]" />
-                        <button className="text-[20px]">Purchase History</button>
+                        <button className="text-[20px] option-text">Purchase History</button>
                     </div>
                 </div>
             
-                {/* <Profile /> */}
+                <Profile />
                 {/* <ResetPassword /> */}
                 {/* <Payment /> */}
-                <History />
+                {/* <History /> */}
             </section>
             
             <Footer />

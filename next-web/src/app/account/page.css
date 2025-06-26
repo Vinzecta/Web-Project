@@ -1,0 +1,26 @@
+@media screen and (max-width: 600px) {
+    #page-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #select-section {
+        width: 100%;
+    }
+
+    #account {
+        font-size: 30px;
+    }
+
+    #username {
+        font-size: 14px;
+    }
+
+    #gmail {
+        font-size: 8px;
+    }
+
+    .option-text {
+        font-size: 18px;
+    }
+}
