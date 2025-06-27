@@ -52,10 +52,10 @@ function Account() {
                     </div>
                 </div>
             
-                <Profile />
+                {/* <Profile /> */}
                 {/* <ResetPassword /> */}
                 {/* <Payment /> */}
-                {/* <History /> */}
+                <History />
             </section>
             
             <Footer />

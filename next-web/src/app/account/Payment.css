@@ -1,0 +1,13 @@
+@media screen and (max-width: 900px) {
+    #payment-section {
+        width: 100%;
+    }
+
+    .payment-logo {
+        width: 40px;
+    }
+
+    .cancel-logo {
+        width: 20px;
+    }
+}

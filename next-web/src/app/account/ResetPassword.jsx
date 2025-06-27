@@ -1,3 +1,5 @@
+import "./ResetPassword.css"
+
 function ResetPassword() {
     return (
         <form className="w-[60%] mt-5 p-5 flex flex-col gap-5 rounded-2xl border border-gray-300 border-opacity-50 mb-10">
