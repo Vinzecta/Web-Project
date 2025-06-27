@@ -1,0 +1,44 @@
+@media screen and (max-width: 900px) {
+    #profile-form {
+        width: 100%;
+    }
+
+    #profile-information {
+        font-size: 20px;
+    }
+
+    #profile-image {
+        width: 100px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    .basic-info {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .flex-info {
+        width: 100%;
+    }
+
+    #address-info {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .address-flex {
+        width: 45%;
+    }
+}
