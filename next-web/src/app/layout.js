@@ -1,15 +1,17 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import "./globals.css";
-import { Analytics } from "@vercel/analytics/next"
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-playfair', 
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800', '900'],
+  variable: '--font-roboto',
 });
 
 export const metadata = {
@@ -19,10 +21,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${playfair.className}`}>
+      <body>
         {children}
       </body>
     </html>

@@ -9,13 +9,13 @@ import Link from "next/link"
 function Footer_Navigation() {
     return (
             <section className="flex justify-around py-10 bg-[#F1F4F1]" id="footer-nav">
-                <h1 className="text-xl">ShopName</h1>
+                <h1 className="text-xl text-[#C25C5C] font-medium">ShopName</h1>
     
                 <nav className="flex gap-10" id="footer-navi">
-                    <Link href="/home" className="text-base">Home</Link>
-                    <Link href='/about' className="text-base">About</Link>
-                    <Link href='/shop' className="text-base">Shop</Link>
-                    <Link href='/contact' className="text-base">Contact</Link>
+                    <Link href="/home" className="text-base font-sans font-normal text-[#C25C5C]">HOME</Link>
+                    <Link href='/about' className="text-base font-sans font-normal text-[#C25C5C]">ABOUT</Link>
+                    <Link href='/shop' className="text-base font-sans font-normal text-[#C25C5C]">SHOP</Link>
+                    <Link href='/contact' className="text-base font-sans font-normal text-[#C25C5C]">CONTACT</Link>
                 </nav>
     
                 <div className="flex gap-2" id="social-media">

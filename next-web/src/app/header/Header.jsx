@@ -5,17 +5,19 @@ import Link from "next/link";
 
 function Header() {
     return (
-        <header className="w-full flex justify-around bg-[#C25C5C]">
-            <h1 className="text-2xl h-fit my-auto text-white" id="shop-name">ShopName</h1>
+        <header className="w-full bg-[#C25C5C]">
+            <nav className="w-[80%] flex justify-between mx-auto">
+                <Link href="/home" className="text-2xl h-fit my-auto font-medium text-white hover:scale-120 transition-transform duration-300" id="shop-name">ShopName</Link>
 
-            <nav className="flex gap-10 w-fit" id="navigation">
-                <Link href="/home" className="text-base px-5 py-10 text-white">HOME</Link>
-                <Link href='/about' className="text-base px-5 py-10 text-white">ABOUT</Link>
-                <Link href='/shop' className="text-base px-5 py-10 text-white">SHOP</Link>
-                <Link href='/contact' className="text-base px-5 py-10 text-white">CONTACT</Link>
+                <div className="flex w-fit" id="navigation">
+                    <Link href="/home" className="text-base px-5 py-10 text-white font-sans font-normal hover:scale-120 transition-transform duration-300">HOME</Link>
+                    <Link href='/about' className="text-base px-5 py-10 text-white font-sans font-normal hover:scale-120 transition-transform duration-300">ABOUT</Link>
+                    <Link href='/shop' className="text-base px-5 py-10 text-white font-sans font-normal hover:scale-120 transition-transform duration-300">SHOP</Link>
+                    <Link href='/contact' className="text-base px-5 py-10 text-white font-sans font-normal hover:scale-120 transition-transform duration-300">CONTACT</Link>
+                </div>
+
+                <Image src={Menu} alt="Menu" className="w-6 hover:scale-120 transition-transform duration-300" id="menu"/>
             </nav>
-
-            <Image src={Menu} alt="Menu" className="w-6" id="menu"/>
         </header>
     );
 }

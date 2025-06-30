@@ -1,19 +1,10 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 820px) {
     #navigation {
         display: none;
     }
 
-    header {
-        justify-content: space-between;
-    }
-
     #shop-name {
         padding: 20px 10px;
-        margin-left: 15px;
-    }
-    
-    #menu {
-        margin-right: 15px;
     }
 }
 
