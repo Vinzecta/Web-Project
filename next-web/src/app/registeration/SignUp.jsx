@@ -1,5 +1,5 @@
-import Facebook from "../../assets/facebook.svg"
-import Google from "../../assets/google.svg"
+import Facebook from "../../../public/facebook.svg"
+import Google from "../../../public/google.svg"
 import Image from "next/image";
 
 function SignUp() {
