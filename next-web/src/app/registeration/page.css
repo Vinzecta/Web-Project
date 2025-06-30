@@ -20,7 +20,7 @@
     }
 }
 
-@media screen and (min-width: 701px) and (max-width: 900px) {
+@media screen and (min-width: 701px) and (max-width: 1024px) {
    #registeration-section {
         width: 70%;
     } 

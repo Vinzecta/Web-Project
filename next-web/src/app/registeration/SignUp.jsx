@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function SignUp() {
     return (
-        <form className="flex flex-col gap-5 p-5 my-auto">
+        <form className="flex flex-col gap-5 p-5 m-auto">
             <h2 className="text-[25px] text-center">Sign Up</h2>
 
             <div className="flex justify-between">
@@ -34,12 +34,12 @@ function SignUp() {
 
             <div className="flex gap-5 justify-center bg-[white] h-[50px] py-3 border border-gray-300 border-opacity-50 w-[100%] rounded-3xl">
                 <Image src={Facebook} alt="Facebook" className="w-[30px]" />
-                <p className="text-base">Sign Up with Facebook</p>
+                <p className="text-base my-auto">Sign Up with Facebook</p>
             </div>
 
             <div className="flex gap-5 justify-center bg-[white] h-[50px] py-3 border border-gray-300 border-opacity-50 w-[100%] rounded-3xl">
                 <Image src={Google} alt="Google" className="w-[30px]" />
-                <p className="text-base">Sign Up with Google</p>
+                <p className="text-base my-auto">Sign Up with Google</p>
             </div>
 
             <p className="text-[14px] text-center">Have an account? <span className="text-[#0000EE]">Sign In</span></p>
