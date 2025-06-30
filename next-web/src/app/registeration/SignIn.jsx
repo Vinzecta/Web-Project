@@ -4,7 +4,7 @@ import Image from "next/image";
 
 function SignIn() {
     return (
-        <form className="w-[50%] flex flex-col gap-5 p-5">
+        <form className="w-[100%] flex flex-col gap-5 p-5 my-auto">
             <h1 className="text-[25px] text-center">Sign In</h1>
 
             <label className="text-base">Email</label>
@@ -28,6 +28,8 @@ function SignIn() {
                 <Image src={Google} alt="Google" className="w-[30px]" />
                 <p className="text-base my-auto">Sign In with Google</p>
             </div>
+
+            <p className="text-[14px] text-center">Don't have account? <span className="text-[#0000EE]">Click here to sign up</span></p>
         </form>
     );
 }

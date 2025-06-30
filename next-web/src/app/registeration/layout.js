@@ -18,10 +18,8 @@ export const metadata = {
 
 export default function RegisterationLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen flex items-center justify-center bg-[#f8f4f4]`}>
+      <div className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen p-5 flex items-center justify-center bg-[#f8f4f4]`}>
         {children}
-      </body>
-    </html>
+      </div>
   );
 }
