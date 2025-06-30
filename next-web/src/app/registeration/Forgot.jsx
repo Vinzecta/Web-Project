@@ -1,6 +1,6 @@
 function Forgot() {
     return (
-        <form className="w-[100%] flex flex-col gap-5 p-5 my-auto">
+        <form className="w-[100%] flex flex-col gap-5 p-5 my-auto" id="forgot-form">
             <h2 className="text-[25px] text-center">Forgot Password?</h2>
             <p className="text-base text-center">Enter your email address below and we’ll send you a link to reset your password.</p>
 
