@@ -11,9 +11,9 @@ function Registeration() {
                 <Image src={Image4} alt="Image-4" className="h-full w-full object-fill" />
             </div> */}
 
-            <SignIn />
+            {/* <SignIn /> */}
             {/* <SignUp /> */}
-            {/* <Forgot /> */}
+            <Forgot />
         </section>
     );
 }
