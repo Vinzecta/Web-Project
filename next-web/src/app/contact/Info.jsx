@@ -62,26 +62,26 @@ function Info() {
                     <label className={`text-base contact-info text-[#424b4a] font-bold ${workSans.className}`}>Name <span className="text-[red]">*</span></label>
                     <div className="flex justify-between" id="name-section">
                         <div className="flex flex-col gap-2 w-[45%] name-detail">
-                            <input type="text" className="bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50"></input>
+                            <input type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
                             <label className={`text-xs text-[#424b4a] font-normal ${workSans.className}`}>First</label>
                         </div>
 
                         <div className="flex flex-col gap-2 w-[45%] name-detail">
-                            <input type="text" className="bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50"></input>
+                            <input type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
                             <label className={`text-xs text-[#424b4a] font-normal ${workSans.className}`}>Last</label>
                         </div>
                     </div>
 
                     <label className={`text-base contact-info text-[#424b4a] font-bold ${workSans.className}`}>Email <span className="text-[red]">*</span></label>
-                    <input type="text" className="bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50"></input>
+                    <input type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
 
                     <label className={`text-base contact-info text-[#424b4a] font-bold ${workSans.className}`}>Title <span className="text-[red]">*</span></label>
-                    <input type="text" className="bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50"></input>
+                    <input type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
 
                     <label className={`text-base contact-info text-[#424b4a] font-bold ${workSans.className}`}>Description <span className="text-[red]">*</span></label>
-                    <textarea className="bg-[white] h-[120px] px-3 py-3 border border-gray-300 border-opacity-50"></textarea>
+                    <textarea className={`bg-[white] h-[120px] px-3 py-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></textarea>
 
-                    <button type="submit" className={`text-base w-fit p-3 text-center border banner-p text-[#C25C5C] border-[#C25C5C] font-medium ${workSans.className} hover:bg-[#C25C5C] hover:text-white delay-75 duration-300 flex justify-center items-center`} id="submit">SUBMIT</button>
+                    <button type="submit" className={`text-base w-fit py-3 px-5 text-center border banner-p text-[#C25C5C] border-[#C25C5C] font-medium ${workSans.className} hover:bg-[#C25C5C] hover:text-white delay-75 duration-300 flex justify-center items-center`} id="submit">SUBMIT</button>
                 </form>
         </section>
     );

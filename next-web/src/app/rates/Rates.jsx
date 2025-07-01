@@ -5,8 +5,8 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 
-function Rates() {
-    const [value, setValue] = React.useState(2);
+function Rates({num_stars}) {
+    const [value, setValue] = React.useState(num_stars);
 
   return (
         <Box sx={{ '& > legend': { mt: 2 } }}>
