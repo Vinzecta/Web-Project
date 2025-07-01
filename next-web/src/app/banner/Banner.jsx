@@ -15,7 +15,7 @@ function Banner ({welcome, title, content, image, button, navigation}) {
             <div className="w-1/2 my-auto flex flex-col gap-5 relative left-15" id="banner-left">
                 <p className={`text-sm text-white banner-p ${workSans.className} font-medium`}>{welcome}</p>
                 <h1 className="text-6xl text-white w-[50%] font-medium" id="banner-h1">{title}</h1>
-                <p className="text-2xl text-white banner-p font-medium">{content}</p>
+                <p className={`text-[16px] text-white banner-p font-normal ${workSans.className}`} id="content">{content}</p>
                 {button ? <Link href={navigation} className={`text-base text-white w-fit py-[10px] px-[30px] border border-white banner-p ${workSans.className} font-medium hover:bg-white hover:text-[#C25C5C] delay-75 duration-300`} id="banner-button">{button}</Link> : undefined}
             </div>
 

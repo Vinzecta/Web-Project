@@ -41,6 +41,14 @@
     #banner-right {
         right: 3%;
     }
+
+    #content {
+        width: 90%;
+    }
+
+    #banner-h1 {
+        width: 90%;
+    }
 }
 
 @media screen and (max-width: 550px) {
