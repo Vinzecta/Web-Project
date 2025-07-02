@@ -60,9 +60,9 @@ function Account() {
                 </div>
             
                 {/* <Profile /> */}
-                <ResetPassword />
+                {/* <ResetPassword /> */}
                 {/* <Payment /> */}
-                {/* <History /> */}
+                <History />
             </section>
             
             <Footer />

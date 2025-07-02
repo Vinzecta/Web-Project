@@ -1,4 +1,11 @@
 import "./History.css"
+import { Work_Sans } from "next/font/google";
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-work-sans",
+});
 
 function History() {
     return (
@@ -19,12 +26,12 @@ function History() {
         //     </table>
         // </section>
 
-        <section className="bg-white rounded-lg shadow-md p-5 w-[60%] mx-auto" id="history-section">
-            <h2 className="text-xl font-medium mb-2">Purchase History</h2>
+        <section className="bg-white rounded-lg shadow-md p-5 w-[60%] h-fit mx-auto" id="history-section">
+            <h2 className="text-xl font-medium mb-2 text-[#C25C5C]">Purchase History</h2>
             <hr className="mb-4" />
 
-            <div className="overflow-x-auto">
-                <table className="min-w-full text-left text-sm">
+            <div className="overflow-x-auto overflow-y-auto max-h-[500px]">
+                <table className={`min-w-full text-left text-sm ${workSans.className}`}>
                 <thead>
                     <tr className="font-semibold whitespace-nowrap">
                     <th className="px-4 py-2">ID</th>
