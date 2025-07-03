@@ -5,10 +5,23 @@ import "./Header.css"
 import Image from "next/image";
 import Link from "next/link";
 import MenuBar from "../Menu/Menu";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Header() {
     const [open, setOpen] = useState(false);
+    const [close, setClose] = useState(false);
+
+    useEffect(() => {
+        if (open || close) {
+            document.body.style.overflow = "hidden"; 
+        } else {
+            document.body.style.overflow = "";
+        }
+
+        return () => {
+            document.body.style.overflow = "";
+        };
+    }, [open]);
 
     return (
         <>
@@ -27,7 +40,7 @@ function Header() {
                 </nav>
             </header>
 
-            {open ? <MenuBar onClose={() => setOpen(false)} /> : undefined}
+            {open ? <MenuBar onClose={() => setOpen(false)} menuStatus={open} /> : undefined}
         </>
     );
 }

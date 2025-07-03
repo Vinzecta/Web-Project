@@ -1,3 +1,5 @@
+"use client"
+
 import { CloseCircleOutlined } from "@ant-design/icons"
 import Image from "next/image"
 import Avatar from "../../../public/avatar.jpg"
@@ -7,6 +9,7 @@ import Link from "next/link";
 import PowerSettingsNewIcon from '@mui/icons-material/PowerSettingsNew';
 import Image7 from "../../../public/image-7.jpg"
 import Counter from "../counter/Counter";
+import { useState, useEffect } from "react";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -14,10 +17,23 @@ const workSans = Work_Sans({
   variable: "--font-work-sans",
 });
 
-export default function MenuBar({onClose}) {
+export default function MenuBar({onClose, menuStatus}) {
+    const [animationClass, setAnimationClass] = useState("translate-x-full");
+
+    useEffect(() => {
+        if (menuStatus) {
+            const timeout = setTimeout(() => {
+                setAnimationClass("translate-x-0");
+            }, 10);
+            return () => clearTimeout(timeout);
+        } else {
+            setAnimationClass("translate-x-full");
+        }
+    }, [menuStatus]);
+
     return (
-        <section className="h-screen absolute bg-[#00000066] w-[100%] top-0 z-1">
-            <div className="h-[100%] w-[35%] bg-white ml-auto flex flex-col">
+        <section className="h-screen w-[100%] fixed bg-[#00000066] top-0 z-50">
+            <div className={`h-[100%] w-[35%] bg-white ml-auto flex flex-col transition-transform duration-500 ease-in-out ${animationClass}`}>
                 <div className="w-[100%] flex justify-between py-3 px-5 border-b border-gray-300 border-opacity-50">
                     <div className="flex gap-5">
                         <Image src={Avatar} className="rounded-full w-[50px]" alt="Avatar" />
