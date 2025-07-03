@@ -14,7 +14,7 @@ const workSans = Work_Sans({
   variable: "--font-work-sans",
 });
 
-export default function MenuBar() {
+export default function MenuBar({onClose}) {
     return (
         <section className="h-screen absolute bg-[#00000066] w-[100%] top-0 z-1">
             <div className="h-[100%] w-[35%] bg-white ml-auto flex flex-col">
@@ -24,7 +24,7 @@ export default function MenuBar() {
                         <p className={`my-auto ${workSans.className} font-medium text-[#424b4a]`}>Username</p>
                     </div>
 
-                    <CloseCircleOutlined />
+                    <CloseCircleOutlined onClick={onClose} />
                 </div>
 
                 <div className="hidden">
@@ -37,15 +37,15 @@ export default function MenuBar() {
 
                 <div>
                     <div className="w-[100%]">
-                        <div className="flex gap-3 justify-end px-5 py-3">
-                            <p className="text-[20px] font-medium text-[#424b4a]">Account</p>
-                            <AccountCircleOutlinedIcon className="my-auto text-[#424b4a]" />
-                        </div>
+                        <Link href="/account" className="flex gap-3 font-medium text-[#424b4a] justify-end px-5 py-3 hover:bg-[#C25C5C] hover:text-white delay-75 duration-300">
+                            <p className="text-[20px]">Account</p>
+                            <AccountCircleOutlinedIcon className="my-auto" />
+                        </Link>
 
-                        <div className="flex gap-3 justify-end px-5 py-3">
-                            <p className="text-[20px] font-medium text-[#424b4a]">Sign Out</p>
-                            <PowerSettingsNewIcon className="my-auto text-[#424b4a]"/>
-                        </div>
+                        <Link href="/" className="flex gap-3 justify-end font-medium text-[#424b4a] px-5 py-3 hover:bg-[#C25C5C] hover:text-white delay-75 duration-300">
+                            <p className="text-[20px]">Sign Out</p>
+                            <PowerSettingsNewIcon className="my-auto"/>
+                        </Link>
                     </div>
                 </div>
 
@@ -58,165 +58,21 @@ export default function MenuBar() {
 
                             <div className="w-[100%] flex flex-col gap-3">
                                 <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
+                                    <p className={`${workSans.className} text-[#C25C5C] font-medium`}>Ceramic Pot</p>
                                     <CloseCircleOutlined />
                                 </div>
 
                                 <div className="flex justify-between">
                                     <Counter className="flex" />
-                                    <p>$99</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-[100%] p-5 flex gap-3 border-b border-gray-300 border-opacity-50">
-                            <Image src={Image7} alt="Image7" className="w-[70px]" />
-
-                            <div className="w-[100%] flex flex-col gap-3">
-                                <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
-                                    <CloseCircleOutlined />
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <Counter className="flex" />
-                                    <p>$99</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-[100%] p-5 flex gap-3 border-b border-gray-300 border-opacity-50">
-                            <Image src={Image7} alt="Image7" className="w-[70px]" />
-
-                            <div className="w-[100%] flex flex-col gap-3">
-                                <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
-                                    <CloseCircleOutlined />
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <Counter className="flex" />
-                                    <p>$99</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-[100%] p-5 flex gap-3 border-b border-gray-300 border-opacity-50">
-                            <Image src={Image7} alt="Image7" className="w-[70px]" />
-
-                            <div className="w-[100%] flex flex-col gap-3">
-                                <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
-                                    <CloseCircleOutlined />
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <Counter className="flex" />
-                                    <p>$99</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-[100%] p-5 flex gap-3 border-b border-gray-300 border-opacity-50">
-                            <Image src={Image7} alt="Image7" className="w-[70px]" />
-
-                            <div className="w-[100%] flex flex-col gap-3">
-                                <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
-                                    <CloseCircleOutlined />
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <Counter className="flex" />
-                                    <p>$99</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-[100%] p-5 flex gap-3 border-b border-gray-300 border-opacity-50">
-                            <Image src={Image7} alt="Image7" className="w-[70px]" />
-
-                            <div className="w-[100%] flex flex-col gap-3">
-                                <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
-                                    <CloseCircleOutlined />
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <Counter className="flex" />
-                                    <p>$99</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-[100%] p-5 flex gap-3 border-b border-gray-300 border-opacity-50">
-                            <Image src={Image7} alt="Image7" className="w-[70px]" />
-
-                            <div className="w-[100%] flex flex-col gap-3">
-                                <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
-                                    <CloseCircleOutlined />
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <Counter className="flex" />
-                                    <p>$99</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-[100%] p-5 flex gap-3 border-b border-gray-300 border-opacity-50">
-                            <Image src={Image7} alt="Image7" className="w-[70px]" />
-
-                            <div className="w-[100%] flex flex-col gap-3">
-                                <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
-                                    <CloseCircleOutlined />
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <Counter className="flex" />
-                                    <p>$99</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-[100%] p-5 flex gap-3 border-b border-gray-300 border-opacity-50">
-                            <Image src={Image7} alt="Image7" className="w-[70px]" />
-
-                            <div className="w-[100%] flex flex-col gap-3">
-                                <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
-                                    <CloseCircleOutlined />
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <Counter className="flex" />
-                                    <p>$99</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="w-[100%] p-5 flex gap-3 border-b border-gray-300 border-opacity-50">
-                            <Image src={Image7} alt="Image7" className="w-[70px]" />
-
-                            <div className="w-[100%] flex flex-col gap-3">
-                                <div className="flex justify-between">
-                                    <p>Ceramic Pot</p>
-                                    <CloseCircleOutlined />
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <Counter className="flex" />
-                                    <p>$99</p>
+                                    <p className={`${workSans.className} text-[#424b4a] font-normal`}>$99</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <div className="flex justify-between py-3 px-5 border-t border-b border-gray-300 border-opacity-50">
-                        <p>Subtotal:</p>
-                        <p>$99</p>
+                        <p className={`${workSans.className} text-[#C25C5C] font-medium`}>Subtotal:</p>
+                        <p className={`${workSans.className} text-[#424b4a] font-normal`}>$99</p>
                     </div>
                 </div>
 

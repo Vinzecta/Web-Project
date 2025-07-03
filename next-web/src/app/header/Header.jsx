@@ -1,10 +1,15 @@
+"use client"
+
 import Menu from "../../../public/menu.svg"
 import "./Header.css"
 import Image from "next/image";
 import Link from "next/link";
 import MenuBar from "../Menu/Menu";
+import { useState } from "react";
 
 function Header() {
+    const [open, setOpen] = useState(false);
+
     return (
         <>
             <header className="w-full bg-[#C25C5C]">
@@ -18,11 +23,11 @@ function Header() {
                         <Link href='/contact' className="text-base px-5 py-10 text-white font-sans font-normal hover:scale-120 transition-transform duration-300">CONTACT</Link>
                     </div>
 
-                    <Image src={Menu} alt="Menu" className="w-6 hover:scale-120 transition-transform duration-300" id="menu"/>
+                    <Image src={Menu} onClick={() => setOpen(true)} alt="Menu" className="w-6 hover:scale-120 transition-transform duration-300" id="menu"/>
                 </nav>
             </header>
 
-            <MenuBar />
+            {open ? <MenuBar onClose={() => setOpen(false)} /> : undefined}
         </>
     );
 }
