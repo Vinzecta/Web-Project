@@ -1,0 +1,17 @@
+@media screen and (max-width: 600px) {
+    #navigation-container {
+        display: flex;
+    }
+
+    #menu-container {
+        width: 75%;
+    }
+
+    .cart-container {
+        display: none;
+    }
+
+    #cart-nav {
+        display: flex;
+    }
+}
