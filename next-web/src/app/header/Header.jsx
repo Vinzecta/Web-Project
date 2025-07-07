@@ -8,20 +8,29 @@ import MenuBar from "../Menu/Menu";
 import { useState, useEffect } from "react";
 
 function Header() {
-    const [open, setOpen] = useState(false);
-    const [close, setClose] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
-        if (open || close) {
-            document.body.style.overflow = "hidden"; 
+        if (isMenuOpen || isVisible) {
+            document.body.style.overflow = "hidden";
         } else {
             document.body.style.overflow = "";
         }
-
         return () => {
             document.body.style.overflow = "";
         };
-    }, [open]);
+    }, [isMenuOpen, isVisible]);
+
+    const handleOpen = () => {
+        setIsVisible(true); 
+        setTimeout(() => setIsMenuOpen(true), 10); 
+    };
+
+    const handleClose = () => {
+        setIsMenuOpen(false); 
+        setTimeout(() => setIsVisible(false), 500);
+    };
 
     return (
         <>
@@ -36,11 +45,11 @@ function Header() {
                         <Link href='/contact' className="text-base px-5 py-10 text-white font-sans font-normal hover:scale-120 transition-transform duration-300">CONTACT</Link>
                     </div>
 
-                    <Image src={Menu} onClick={() => setOpen(true)} alt="Menu" className="w-6 hover:scale-120 transition-transform duration-300" id="menu"/>
+                    <Image src={Menu} onClick={handleOpen} alt="Menu" className="w-6 hover:scale-120 transition-transform duration-300" id="menu"/>
                 </nav>
             </header>
 
-            {open ? <MenuBar onClose={() => setOpen(false)} menuStatus={open} /> : undefined}
+            {isVisible ? <MenuBar onClose={handleClose} menuStatus={isMenuOpen} /> : undefined}
         </>
     );
 }

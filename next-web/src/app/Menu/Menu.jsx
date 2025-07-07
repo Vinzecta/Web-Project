@@ -26,14 +26,14 @@ export default function MenuBar({onClose, menuStatus}) {
     const [openNav, setOpenNav] = useState(false);
 
     useEffect(() => {
-        if (menuStatus) {
-            const timeout = setTimeout(() => {
-                setAnimationClass("translate-x-0");
-            }, 10);
-            return () => clearTimeout(timeout);
-        } else {
-            setAnimationClass("translate-x-full");
-        }
+    if (menuStatus) {
+        const timeout = setTimeout(() => {
+            setAnimationClass("translate-x-0");
+        }, 10);
+        return () => clearTimeout(timeout);
+    } else {
+        setAnimationClass("translate-x-full");
+    }
     }, [menuStatus]);
 
     return (
@@ -45,7 +45,7 @@ export default function MenuBar({onClose, menuStatus}) {
                         <p className={`my-auto ${workSans.className} font-medium text-[#424b4a]`}>Username</p>
                     </div>
 
-                    <CloseCircleOutlined onClick={onClose} />
+                    <CloseCircleOutlined onClick={onClose} className="hover:scale-120 transition-transform duration-300" />
                 </div>
 
                 <div className="hidden">
