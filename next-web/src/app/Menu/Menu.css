@@ -1,5 +1,5 @@
 @media screen and (max-width: 600px) {
-    #navigation-container {
+    .navigation-container {
         display: flex;
     }
 
@@ -13,5 +13,45 @@
 
     #cart-nav {
         display: flex;
+    }
+
+    section {
+        font-size: 14px;
+    }
+
+    #avatar {
+        width: 40px;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .navigation-container {
+        display: flex;
+    }
+
+    #menu-container {
+        width: 40%;
+    }
+
+    .cart-container {
+        display: none;
+    }
+
+    #cart-nav {
+        display: flex;
+    }
+
+    section {
+        font-size: 14px;
+    }
+
+    #avatar {
+        width: 40px;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .navigation-container {
+        display: none;
     }
 }
