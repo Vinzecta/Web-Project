@@ -1,0 +1,31 @@
+@media screen and (max-width: 600px) {
+    #payment-container {
+        width: 90%;
+        overflow-y: auto;
+    }
+
+    .payment-logo {
+        display: none;
+    }
+
+    #credit-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #expiration-date {
+        width: 100%;
+    }
+
+    #cvv {
+        width: 100%;
+    }
+
+    .payment-tag {
+        margin: 0 auto;
+    }
+
+    section {
+        font-size: 14px;
+    }
+}
