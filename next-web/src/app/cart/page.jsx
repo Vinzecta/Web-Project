@@ -5,6 +5,7 @@ import Footer from "../footer/Footer"
 import Order_Detail from "./Order_Detail"
 import Purchase from "./Purchase";
 import Price_Summary from "./Price_Summary";
+import PaymentMethod from "../payment/Payment";
 
 function Cart() {
     return (
@@ -13,6 +14,7 @@ function Cart() {
             <Order_Detail />
             <Price_Summary />
             <Footer />
+            <PaymentMethod />
         </>
     );
 }
