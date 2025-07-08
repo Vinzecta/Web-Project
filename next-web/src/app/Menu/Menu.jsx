@@ -76,9 +76,9 @@ export default function MenuBar({onClose, menuStatus}) {
                                         transition={{ duration: 0.5, ease: "easeInOut" }}
                                         className="flex flex-col text-right navigation-container">
                                             <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 border-t border-gray-300 border-opacity-50 my-auto`}>Home</Link>
-                                            <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 my-auto`}>About</Link>
-                                            <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 my-auto`}>Shop</Link>
-                                            <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 border-b border-gray-300 border-opacity-50 my-auto`}>Contact</Link>
+                                            <Link href="/about" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 my-auto`}>About</Link>
+                                            <Link href="/shop" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 my-auto`}>Shop</Link>
+                                            <Link href="/contact" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 border-b border-gray-300 border-opacity-50 my-auto`}>Contact</Link>
                                         </motion.nav> : undefined}
                         </AnimatePresence>
 
