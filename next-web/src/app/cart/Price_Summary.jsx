@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Paid from "../../../public/paid.svg"
 import User from "../../../public/user.svg"

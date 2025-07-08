@@ -25,6 +25,16 @@ export default function PaymentMethod({onClose}) {
         setChangePayment(prev => !prev);
     }
 
+    useEffect(() => {
+    // Cấm scroll khi mở popup
+    document.body.style.overflow = "hidden";
+
+    // Cho phép scroll lại khi đóng popup
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
+
     return  (
         <section className="h-screen w-[100%] fixed bg-[#00000066] top-0 z-50 flex justify-center">
             <motion.div
