@@ -7,10 +7,10 @@ import Mastercard from "../../../public/mastercard.svg"
 import Paypal from "../../../public/paypal.svg"
 import Momo from "../../../public/momo.svg"
 import Zalopay from "../../../public/zalopay.svg"
-import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 import { Work_Sans } from "next/font/google";
 import "./Payment.css"
+import { motion, AnimatePresence } from "framer-motion";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -18,7 +18,7 @@ const workSans = Work_Sans({
   variable: "--font-work-sans",
 });
 
-export default function PaymentMethod() {
+export default function PaymentMethod({onClose}) {
     const [changePayment, setChangePayment] = useState(false);
 
     const changeMethod = () => {
@@ -27,13 +27,18 @@ export default function PaymentMethod() {
 
     return  (
         <section className="h-screen w-[100%] fixed bg-[#00000066] top-0 z-50 flex justify-center">
-            <div className="bg-white w-[30%] h-[80%] my-auto rounded-2xl p-10 flex flex-col gap-5" id="payment-container">
+            <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.3 }} 
+            className="bg-white w-[30%] h-[80%] my-auto rounded-2xl p-10 flex flex-col gap-5" id="payment-container">
                 <div className="w-[100%] text-right">
-                    <CloseCircleOutlined className="text-[25px] hover:scale-120 transition-transform duration-300 cursor-pointer" style={{color: '#424b4a' }} />
+                    <CloseCircleOutlined onClick={onClose} className="text-[25px] hover:scale-120 transition-transform duration-300 cursor-pointer" style={{color: '#424b4a' }} />
                 </div>
 
                 <div className="flex">
-                    <div className={`flex gap-3 w-[50%] pl-3 py-3 transition-all duration-500 ${!changePayment ? "shadow-[0_-2px_0_0_#C25C5C] w-[50%]" : "shadow-[0_-2px_0_0_#eeeeee]"} cursor-pointer`} onClick={changeMethod}>
+                    <div className={`flex justify-between w-[50%] pl-3 py-3 transition-all duration-500 ${!changePayment ? "shadow-[0_-2px_0_0_#C25C5C] w-[50%]" : "shadow-[0_-2px_0_0_#eeeeee]"} cursor-pointer`} onClick={changeMethod}>
                         <h2 className={`my-auto text-base ${!changePayment ? "font-semibold" : "font-normal"} ${workSans.className} text-[#424b4a] payment-tag`}>Credit Card</h2>
 
                         <div className="flex gap-2">
@@ -42,7 +47,7 @@ export default function PaymentMethod() {
                         </div>
                     </div>
 
-                    <div className={`flex gap-3 w-[50%] py-3 pl-3 transition-all duration-500 ${changePayment ? "shadow-[0_-2px_0_0_#C25C5C] w-[50%]" : "shadow-[0_-2px_0_0_#eeeeee]"} cursor-pointer`} onClick={changeMethod}>
+                    <div className={`flex justify-between w-[50%] py-3 pl-3 transition-all duration-500 ${changePayment ? "shadow-[0_-2px_0_0_#C25C5C] w-[50%]" : "shadow-[0_-2px_0_0_#eeeeee]"} cursor-pointer`} onClick={changeMethod}>
                         <h2 className={`my-auto text-base ${changePayment ? "font-semibold" : "font-normal"} ${workSans.className} text-[#424b4a] payment-tag`}>Wallet</h2>
 
                         <div className="flex gap-2">
@@ -113,7 +118,7 @@ export default function PaymentMethod() {
                                                 </button>
                                             </motion.div>}
                 </AnimatePresence>
-            </div>
+            </motion.div>
         </section>
     );
 }

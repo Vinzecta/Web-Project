@@ -14,7 +14,6 @@ function Cart() {
             <Order_Detail />
             <Price_Summary />
             <Footer />
-            <PaymentMethod />
         </>
     );
 }
