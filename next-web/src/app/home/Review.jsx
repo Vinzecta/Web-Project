@@ -19,7 +19,7 @@ function Review() {
 
                 <div className="flex flex-wrap justify-between">
                     <div className="w-[49%] mb-10 bg-white p-10 flex flex-col gap-5 review-container">
-                        <Rates/>
+                        <Rates readOnly/>
                         <p className={`text-base review font-normal ${workSans.className} text-[#424b4a]`}>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                         <div className="flex gap-3">
                             <Image src={Avatar} alt="Avatar" className="rounded-full"/>
@@ -31,7 +31,7 @@ function Review() {
                     </div>
 
                     <div className="w-[49%] mb-10 bg-white p-10 flex flex-col gap-5 review-container">
-                        <Rates/>
+                        <Rates readOnly/>
                         <p className={`text-base review font-normal ${workSans.className} text-[#424b4a]`}>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                         <div className="flex gap-3">
                             <Image src={Avatar} alt="Avatar" className="rounded-full"/>
@@ -43,7 +43,7 @@ function Review() {
                     </div>
 
                     <div className="w-[49%] mb-10 bg-white p-10 flex flex-col gap-5 review-container">
-                        <Rates/>
+                        <Rates readOnly/>
                         <p className={`text-base review font-normal ${workSans.className} text-[#424b4a]`}>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                         <div className="flex gap-3">
                             <Image src={Avatar} alt="Avatar" className="rounded-full"/>
@@ -55,7 +55,7 @@ function Review() {
                     </div>
 
                     <div className="w-[49%] mb-10 bg-white p-10 flex flex-col gap-5 review-container">
-                        <Rates/>
+                        <Rates readOnly/>
                         <p className={`text-base review font-normal ${workSans.className} text-[#424b4a]`}>Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
                         <div className="flex gap-3">
                             <Image src={Avatar} alt="Avatar" className="rounded-full"/>

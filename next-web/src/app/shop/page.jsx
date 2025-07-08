@@ -46,49 +46,61 @@ function Shop() {
             <section className="flex flex-wrap justify-between w-[80%] mx-auto pt-10">
                 <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
                     <Image src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
-                    <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
-                    <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
-                    <Rates/>
+                    <div className="mt-3">
+                        <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
+                        <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
+                    </div>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
                 <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
                     <Image src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
-                    <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
-                    <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
-                    <Rates/>
+                    <div className="mt-3">
+                        <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
+                        <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
+                    </div>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
                 <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
                     <Image src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
-                    <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
-                    <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
-                    <Rates/>
+                    <div className="mt-3">
+                        <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
+                        <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
+                    </div>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
                 <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
                     <Image src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
-                    <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
-                    <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
-                    <Rates/>
+                    <div className="mt-3">
+                        <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
+                        <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
+                    </div>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
                 <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
                     <Image src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
-                    <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
-                    <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
-                    <Rates/>
+                    <div className="mt-3">
+                        <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
+                        <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
+                    </div>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
                 <div className="w-[30%] h-fit flex flex-col gap-2 mb-10 product-container">
                     <Image src={Image7} alt="Image 7" className="w-full h-full object-cover"/>
-                    <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
-                    <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
-                    <Rates/>
+                    <div className="mt-3">
+                        <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
+                        <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
+                    </div>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
             </section>

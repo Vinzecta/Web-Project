@@ -24,7 +24,7 @@ function Popular({sub_title, title}) {
                         <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
                         <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
                     </div>
-                    <Rates/>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
@@ -34,7 +34,7 @@ function Popular({sub_title, title}) {
                         <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
                         <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
                     </div>
-                    <Rates/>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
@@ -44,7 +44,7 @@ function Popular({sub_title, title}) {
                         <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
                         <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
                     </div>
-                    <Rates/>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
@@ -54,7 +54,7 @@ function Popular({sub_title, title}) {
                         <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
                         <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
                     </div>
-                    <Rates/>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
@@ -64,7 +64,7 @@ function Popular({sub_title, title}) {
                         <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
                         <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
                     </div>
-                    <Rates/>
+                    <Rates readOnly/>
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
 
@@ -74,7 +74,7 @@ function Popular({sub_title, title}) {
                         <p className={`text-xs category font-normal ${workSans.className} text-[#7A7A7A]`}>Ceramic</p>
                         <h4 className="text-[22px] product font-medium text-[#C25C5C]">Ceramic Cup</h4>
                     </div>
-                    <Rates/>
+                    <Rates readOnly />
                     <p className={`text-lg price font-bold ${workSans.className} text-[#424b4a]`}><span className="line-through text-lg price text-[#a0a5a4]">$100</span> $99</p>
                 </div>
             </div>

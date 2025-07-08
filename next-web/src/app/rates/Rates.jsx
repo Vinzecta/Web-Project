@@ -5,7 +5,7 @@ import Box from '@mui/material/Box';
 import Rating from '@mui/material/Rating';
 import Typography from '@mui/material/Typography';
 
-function Rates({num_stars}) {
+function Rates({num_stars, ...props}) {
     const [value, setValue] = React.useState(num_stars);
 
   return (
@@ -17,6 +17,7 @@ function Rates({num_stars}) {
             onChange={(event, newValue) => {
             setValue(newValue);
             }}
+            {...props}
         />
         </Box>
     );

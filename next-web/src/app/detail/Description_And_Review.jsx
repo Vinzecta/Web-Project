@@ -42,7 +42,7 @@ function Description_And_Review() {
                                     <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full avatar"/>
 
                                     <div className="flex flex-col gap-2">
-                                        <Rates />
+                                        <Rates readOnly/>
                                         <p className={`text-base ${workSans.className} font-normal text-[#424b4a]`}>This shit is so ass!</p>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@ function Description_And_Review() {
                                     <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full avatar"/>
 
                                     <div className="flex flex-col gap-2">
-                                        <Rates />
+                                        <Rates readOnly/>
                                         <p className={`text-base ${workSans.className} font-normal text-[#424b4a]`}>This shit is so ass!</p>
                                     </div>
                                 </div>
@@ -60,7 +60,7 @@ function Description_And_Review() {
                                     <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full avatar"/>
 
                                     <div className="flex flex-col gap-2">
-                                        <Rates />
+                                        <Rates readOnly />
                                         <p className={`text-base ${workSans.className} font-normal text-[#424b4a]`}>This shit is so ass!</p>
                                     </div>
                                 </div>
@@ -69,7 +69,7 @@ function Description_And_Review() {
                                     <Image src={Avatar} alt="Avatar" className="w-[60px] rounded-full avatar"/>
 
                                     <div className="flex flex-col gap-2">
-                                        <Rates />
+                                        <Rates readOnly />
                                         <p className={`text-base ${workSans.className} font-normal text-[#424b4a]`}>This shit is so ass!</p>
                                     </div>
                                 </div>

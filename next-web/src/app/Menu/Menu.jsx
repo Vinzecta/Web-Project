@@ -14,6 +14,7 @@ import NavigationOutlinedIcon from '@mui/icons-material/NavigationOutlined';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import "./Menu.css"
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -67,12 +68,19 @@ export default function MenuBar({onClose, menuStatus}) {
                             </div>
                         </button>
 
-                        {openNav ? <nav className="flex flex-col text-right navigation-container">
-                                        <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 border-t border-gray-300 border-opacity-50 my-auto`}>Home</Link>
-                                        <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 my-auto`}>About</Link>
-                                        <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 my-auto`}>Shop</Link>
-                                        <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 border-b border-gray-300 border-opacity-50 my-auto`}>Contact</Link>
-                                    </nav> : undefined}
+                        <AnimatePresence>
+                            {openNav ? <motion.nav 
+                                        initial={{ opacity: 0, height: 0 }}
+                                        animate={{ opacity: 1, height: "auto" }}
+                                        exit={{ opacity: 0, height: 0 }}
+                                        transition={{ duration: 0.5, ease: "easeInOut" }}
+                                        className="flex flex-col text-right navigation-container">
+                                            <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 border-t border-gray-300 border-opacity-50 my-auto`}>Home</Link>
+                                            <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 my-auto`}>About</Link>
+                                            <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 my-auto`}>Shop</Link>
+                                            <Link href="/home" className={`${workSans.className} font-normal text-xs text-[#424b4a] uppercase px-5 py-3 border-b border-gray-300 border-opacity-50 my-auto`}>Contact</Link>
+                                        </motion.nav> : undefined}
+                        </AnimatePresence>
 
                         <Link href="/account" className="flex gap-3 font-medium text-[#424b4a] justify-end px-5 py-3 hover:bg-[#C25C5C] hover:text-white delay-75 duration-300">
                             <p className={`text-normal ${workSans.className} font-normal uppercase my-auto`}>Account</p>

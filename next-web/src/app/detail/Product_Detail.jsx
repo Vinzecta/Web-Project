@@ -14,11 +14,6 @@ function Product_Detail() {
     return (
         <section className="w-[80%] mx-auto mt-10 flex gap-10" id="detail-section">
             <div className="w-[50%] flex gap-2" id="image-container">
-                <div className="flex flex-col gap-2 w-fit h-fit" id="small-image-container">
-                    <Image src={Image7} alt="Image 7" className="w-[120px]" />
-                    <Image src={Image7} alt="Image 7" className="w-[120px]" />
-                </div>
-
                 <Image src={Image7} alt="Image 7" className="h-full w-full object-cover" />
             </div>
 
