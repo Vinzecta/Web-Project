@@ -27,7 +27,7 @@ export default function PaymentMethod() {
 
     return  (
         <section className="h-screen w-[100%] fixed bg-[#00000066] top-0 z-50 flex justify-center">
-            <div className="bg-white w-[40%] h-[80%] my-auto rounded-2xl p-10 flex flex-col gap-5" id="payment-container">
+            <div className="bg-white w-[30%] h-[80%] my-auto rounded-2xl p-10 flex flex-col gap-5" id="payment-container">
                 <div className="w-[100%] text-right">
                     <CloseCircleOutlined className="text-[25px] hover:scale-120 transition-transform duration-300 cursor-pointer" style={{color: '#424b4a' }} />
                 </div>
@@ -96,7 +96,7 @@ export default function PaymentMethod() {
                                                 animate={{ opacity: 1, y: 0 }}
                                                 exit={{ opacity: 0, y: -20 }}
                                                 transition={{ duration: 0.4 }}
-                                                className="w-[100%] mx-auto flex flex-col gap-3 bill-card payment-button my-auto">
+                                                className="w-[100%] mx-auto flex flex-col gap-3 bill-card payment-button">
                                                 <button className="flex w-[100%] py-5 px-5 gap-5 shadow-[0_3px_10px_rgb(0,0,0,0.2)] rounded-2xl">
                                                     <Image src={Zalopay} className="w-[30px]" alt="Zalopay" />
                                                     <p className={`text-[16px] my-auto ${workSans.className} font-medium text-[#424b4a]`}>Zalopay</p>

@@ -29,3 +29,33 @@
         font-size: 14px;
     }
 }
+
+@media screen and (min-width: 601px) and (max-width: 1280px) {
+    #payment-container {
+        width: 80%;
+        overflow-y: auto;
+    }
+
+    #credit-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #expiration-date {
+        width: 100%;
+    }
+
+    #cvv {
+        width: 100%;
+    }
+
+    section {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-height: 1024px) {
+    #payment-container {
+        height: auto;
+    }
+}
