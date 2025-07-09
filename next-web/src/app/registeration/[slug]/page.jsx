@@ -5,6 +5,7 @@ import SignUp from "../SignUp"
 import Forgot from "../Forgot"
 import { useRouter, useParams } from "next/navigation"
 import { useEffect } from "react"
+import "../page.css"
 
 export default function RegisterationPage() {
     const params = useParams();

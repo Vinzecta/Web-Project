@@ -2,6 +2,7 @@ import Facebook from "../../../public/facebook_color.svg"
 import Google from "../../../public/google.svg"
 import Image from "next/image";
 import { Work_Sans } from "next/font/google";
+import Link from "next/link";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -36,7 +37,7 @@ function SignIn() {
                 <p className={`text-base my-auto ${workSans.className} text-[#424b4a] font-medium`}>Sign In with Google</p>
             </div>
 
-            <p className={`text-[14px] text-center ${workSans.className} tex-[#424b4a] font-normal`}>Don't have account? <span className="text-[#0000EE] hover:underline">Click here to sign up</span></p>
+            <p className={`text-[14px] text-center ${workSans.className} tex-[#424b4a] font-normal`}>Don't have account? <span className="text-[#0000EE] hover:underline"><Link href="/registeration/sign-up">Click here to sign up</Link></span></p>
         </form>
     );
 }
