@@ -6,6 +6,13 @@ import Image from "next/image";
 import Link from "next/link";
 import MenuBar from "../Menu/Menu";
 import { useState, useEffect } from "react";
+import { Work_Sans } from "next/font/google";
+
+const workSans = Work_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-work-sans",
+});
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
