@@ -1,3 +1,5 @@
+"use client"
+
 import Facebook from "../../../public/facebook_color.svg"
 import Google from "../../../public/google.svg"
 import Image from "next/image";
