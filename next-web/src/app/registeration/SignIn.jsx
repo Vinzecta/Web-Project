@@ -21,15 +21,8 @@ function SignIn() {
     const [required, setRequired] = useState({email: "", password: ""});
     const [formData, setFormData] = useState({email: "", password: ""});
     const [submit, setSubmit] = useState(false);
-    const [error, setError] = useState("");
-    const emailRegex = /^[\w\-\.]+@([\w-]+\.)+[\w-]{2,}$/;
 
     useEffect(() => {
-        setError("");
-        if (formData.email.trim() != "" && !emailRegex.test(formData.email)) {
-            setError("Email is invalid!");
-        }
-
         if (required.email !== "" && formData.email !== "") {
             setRequired(prev => ({ ...prev, email: "" }));
         }
@@ -52,10 +45,6 @@ function SignIn() {
             blankInput.password = "required";
         }
 
-        if (error != "") {
-            e.preventDefault();
-        }
-
         setRequired(blankInput);
         setSubmit(true);
     };
@@ -69,11 +58,6 @@ function SignIn() {
                 <AnimatePresence mode="wait">
                     {
                         (required.email != "" && submit) ? <Error error={required.email} /> : undefined
-                    }
-                </AnimatePresence>
-                <AnimatePresence mode="wait">            
-                    {
-                        (error != "") ? <Error error={error} /> : undefined
                     }
                 </AnimatePresence>
             </div>
@@ -101,12 +85,12 @@ function SignIn() {
 
             <p className={`text-base text-center ${workSans.className} text-[#424b4a] font-normal`}>Or</p>
 
-            <div className="flex gap-5 justify-center bg-[white] h-[50px] py-3 border border-gray-300 border-opacity-50 w-[100%] rounded-3xl">
+            <div className="flex gap-5 justify-center bg-[white] h-[50px] py-3 border border-gray-300 border-opacity-50 w-[100%] rounded-3xl hover:scale-105 cursor-pointer transition-transform duration-300">
                 <Image src={Facebook} alt="Facebook" className="w-[30px]" />
                 <p className={`text-base my-auto ${workSans.className} text-[#424b4a] font-medium`}>Sign In with Facebook</p>
             </div>
 
-            <div className="flex gap-5 justify-center bg-[white] h-[50px] py-3 border border-gray-300 border-opacity-50 w-[100%] rounded-3xl">
+            <div className="flex gap-5 justify-center bg-[white] h-[50px] py-3 border border-gray-300 border-opacity-50 w-[100%] rounded-3xl hover:scale-105 cursor-pointer transition-transform duration-300">
                 <Image src={Google} alt="Google" className="w-[30px]" />
                 <p className={`text-base my-auto ${workSans.className} text-[#424b4a] font-medium`}>Sign In with Google</p>
             </div>
