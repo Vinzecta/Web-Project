@@ -68,7 +68,7 @@ function SignIn() {
             const data = await res.json();
             if (data.success) {
                 const timeout = setTimeout(() => {
-                    router.push("/home");
+                    // router.push("/home");
                     setSubmitData(false);
                 }, 2000)
             } else {
