@@ -10,6 +10,9 @@ import Error from "../error message/Error";
 import { AnimatePresence } from "framer-motion";
 import ClearIcon from '@mui/icons-material/Clear';
 import CheckIcon from '@mui/icons-material/Check';
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
+import { useRouter } from "next/navigation";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -25,6 +28,9 @@ function SignUp() {
     const [error, setError] = useState({email: "", password: [false, false, false], confirm: ""});
     const uppercase = /[A-Z]/;
     const special = /[^a-zA-Z0-9]/;
+    const [type, setType] = useState({password: formData.password.length > 0, confirm: formData.confirm.length > 0})
+    const [showPassword, setShowPassword] = useState({password: false, confirm: false});
+    const router = useRouter();
     const changeBlankError = (form) => {
         if (formData[form] !== "" && required[form] !== "") {
             setRequired(prev => ({ ...prev, [form]: "" }));
@@ -75,6 +81,26 @@ function SignUp() {
         setRequired(blankInput);
         setError(errors);
 
+        for (const key in blankInput) {
+            if (blankInput[key] !== "") {
+                return;
+            }
+        }
+
+        for (const key in errors) {
+            const value = errors[key];
+
+            if (Array.isArray(value)) {
+                if (value.some(v => !v)) {
+                    return;
+                }
+            } else {
+                if (value !== "") {
+                    return;
+                }
+            }
+        }
+ 
         try {
             const res = await fetch("/api/sign-up", {
                 method: "POST",
@@ -84,6 +110,7 @@ function SignUp() {
                 body: JSON.stringify(formData)
             })
             const data = await res.json();
+            router.push("/home");
         } catch (err) {
             console.error(err);
         }
@@ -95,7 +122,8 @@ function SignUp() {
         const specialRequire = special.test(formData.password);
 
         setError(prev => ({...prev, password: [lengthRequire, uppercaseRequire, specialRequire]}));
-    }, [formData])
+        setType({password: formData.password.length > 0, confirm: formData.confirm.length > 0})
+    }, [formData.password, formData.confirm])
 
     return (
         <form className="w-[100%] flex flex-col gap-5 p-5 m-auto" onSubmit={handleSubmit}>
@@ -141,7 +169,18 @@ function SignUp() {
                 </AnimatePresence>
             </div>
 
-            <input onInput={(e) => setFormData({...formData, password: e.target.value})} name="password" className={`bg-[white] h-[50px] p-3 border border-gray-300 border-opacity-50 w-[100%] ${workSans.className} text-[#424b4a] font-normal`}></input>
+            <div>
+                <input type={showPassword.password ? "text" : "password"} onInput={(e) => setFormData({...formData, password: e.target.value})} name="password" className={`bg-[white] h-[50px] p-3 pr-10 border border-gray-300 border-opacity-50 w-[100%] ${workSans.className} text-[#424b4a] font-normal`} />
+
+                {
+                    type.password ? 
+                    showPassword.password ? 
+                    <VisibilityOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, password: !prev.password}))} className="absolute translate-y-[55%] left-[61%] cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> : 
+                    <VisibilityOffOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, password: !prev.password}))} className="absolute translate-y-[55%] left-[61%] cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> :
+                    undefined
+                }
+            </div>
+
             <div className="flex flex-col gap-2">
                 <div className="flex gap-2">
                     {
@@ -174,7 +213,17 @@ function SignUp() {
                     }
                 </AnimatePresence>
             </div>
-            <input onInput={(e) => setFormData({...formData, confirm: e.target.value})} name="confirm" className={`bg-[white] h-[50px] p-3 border border-gray-300 border-opacity-50 w-[100%] ${workSans.className} text-[#424b4a] font-normal`}></input>
+
+            <div>
+                <input type={showPassword.confirm ? "text" : "password"} onInput={(e) => setFormData({...formData, confirm: e.target.value})} name="confirm" className={`bg-[white] h-[50px] p-3 pr-10 border border-gray-300 border-opacity-50 w-[100%] ${workSans.className} text-[#424b4a] font-normal`} />
+                {
+                    type.confirm ? 
+                    showPassword.confirm ? 
+                    <VisibilityOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, confirm: !prev.confirm}))} className="absolute translate-y-[55%] left-[61%] cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> : 
+                    <VisibilityOffOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, confirm: !prev.confirm}))} className="absolute translate-y-[55%] left-[61%] cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> :
+                    undefined
+                }
+            </div>
 
             <button className={`text-base w-1/1 py-3 px-5 text-center border banner-p text-[#C25C5C] rounded-3xl mx-auto border-[#C25C5C] font-medium ${workSans.className} hover:bg-[#C25C5C] hover:text-white delay-75 duration-300 flex justify-center items-center`}>Sign Up</button>
 

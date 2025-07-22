@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+input::-ms-reveal {
+  display: none;
+}
+
 /* body {
   font-family: 'Playfair Display', serif;
 } */
