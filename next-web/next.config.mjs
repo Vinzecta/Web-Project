@@ -7,6 +7,11 @@ const nextConfig = {
         destination: "/home",   // Trang sẽ chuyển đến
         permanent: true         // 301 Redirect (tốt cho SEO)
       },
+      {
+        source: "/account",
+        destination: "/account/profile",
+        permanent: true
+      },
     ];
   },
 };
