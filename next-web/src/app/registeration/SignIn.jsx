@@ -118,14 +118,14 @@ function SignIn() {
                 </AnimatePresence>
             </div>    
 
-            <div>
+            <div className="relative w-full">
                 <input type={showPassword.password ? "text" : "password"} onInput={(e) => setFormData({...formData, password: e.target.value})} name="password" className={`bg-[white] h-[50px] p-3 pr-10 border border-gray-300 border-opacity-50 w-[100%] ${workSans.className} text-[#424b4a] font-normal`} />
 
                 {
                     type.password ? 
                     showPassword.password ? 
-                    <VisibilityOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, password: !prev.password}))} className="absolute translate-y-[55%] left-[61%] cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> : 
-                    <VisibilityOffOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, password: !prev.password}))} className="absolute translate-y-[55%] left-[61%] cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> :
+                    <VisibilityOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, password: !prev.password}))} className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> : 
+                    <VisibilityOffOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, password: !prev.password}))} className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> :
                     undefined
                 }
             </div>
