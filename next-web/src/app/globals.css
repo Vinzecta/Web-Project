@@ -4,6 +4,32 @@ input::-ms-reveal {
   display: none;
 }
 
+
+@media screen and (max-width: 600px) {
+  #not-found-section {
+    flex-direction: column;
+    
+    margin: auto;
+    gap: 0;
+  }
+
+  #content-container h1 {
+    font-size: 30px;
+  }
+
+  #content-container p {
+    font-size: 14px;
+  }
+
+  #content-container {
+    width: 100%;
+  }
+
+  #sad-face {
+    width: 30%;
+  }
+}
+
 /* body {
   font-family: 'Playfair Display', serif;
 } */
