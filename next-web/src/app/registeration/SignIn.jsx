@@ -10,6 +10,8 @@ import Error from "../error message/Error";
 import { AnimatePresence } from "framer-motion";
 import CircularProgress from '@mui/material/CircularProgress';
 import { useRouter } from "next/navigation";
+import VisibilityOutlinedIcon from '@mui/icons-material/VisibilityOutlined';
+import VisibilityOffOutlinedIcon from '@mui/icons-material/VisibilityOffOutlined';
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -27,6 +29,7 @@ function SignIn() {
     const button = useRef(null);
     const loadingSpinner = useRef(null);
     const router = useRouter();
+    const [type, setType] = useState({password: formData.password.length > 0})
 
     useEffect(() => {
         if (required.email !== "" && formData.email !== "") {
@@ -37,6 +40,10 @@ function SignIn() {
             setRequired(prev => ({ ...prev, password: "" }))
         }
     }, [formData]);
+
+    useEffect(() => {
+        setType({password: formData.password.length > 0});
+    }, [formData.password]);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -68,7 +75,7 @@ function SignIn() {
             const data = await res.json();
             if (data.success) {
                 const timeout = setTimeout(() => {
-                    // router.push("/home");
+                    router.push("/home");
                     setSubmitData(false);
                 }, 2000)
             } else {
@@ -111,11 +118,16 @@ function SignIn() {
                 </AnimatePresence>
             </div>    
 
-            <input onInput={(e) => setFormData({...formData, password: e.target.value})} type={showPassword ? "text" : "password"} className={`bg-[white] h-[50px] p-3 border border-gray-300 border-opacity-50 w-[100%] ${workSans.className} font-normal text-[#424b4a]`}/>
+            <div>
+                <input type={showPassword.password ? "text" : "password"} onInput={(e) => setFormData({...formData, password: e.target.value})} name="password" className={`bg-[white] h-[50px] p-3 pr-10 border border-gray-300 border-opacity-50 w-[100%] ${workSans.className} text-[#424b4a] font-normal`} />
 
-            <div className="flex gap-2">
-                <input type="checkbox" onClick={() => setShowPassword(prev => !prev)} />
-                <p className={`text-sm ${workSans.className} font-normal text-[#424b4a]`}>Show password</p>
+                {
+                    type.password ? 
+                    showPassword.password ? 
+                    <VisibilityOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, password: !prev.password}))} className="absolute translate-y-[55%] left-[61%] cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> : 
+                    <VisibilityOffOutlinedIcon onClick={() => setShowPassword((prev) => ({...prev, password: !prev.password}))} className="absolute translate-y-[55%] left-[61%] cursor-pointer" sx={{color: "#999999", fontWeight: "light"}} /> :
+                    undefined
+                }
             </div>
 
             <Link href="/registeration/forgot" className={`text-[14px] text-[#0000EE] ${workSans.className} font-normal hover:underline text-right`}>Forgot Password?</Link>

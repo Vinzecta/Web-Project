@@ -19,7 +19,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const workSans = Work_Sans({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
-  variable: "--font-work-sans",
+  className: "--font-work-sans",
 });
 
 export default function MenuBar({onClose, menuStatus}) {
