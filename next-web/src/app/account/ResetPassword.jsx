@@ -40,6 +40,8 @@ function ResetPassword() {
         confirm: false
     })
 
+    const [confirmPassword, setConfirmPassword] = useState("");
+
     const handleSubmit = (e) => {
         e.preventDefault();
         setSubmit(true);
@@ -53,6 +55,18 @@ function ResetPassword() {
         for (const key in formData) {
             if (formData[key] === "") {
                 blankError[key] = "Required!"
+            }
+        }
+
+        if (formData.confirm.length > 0) {
+            if (formData.confirm !== formData.new) {
+                setConfirmPassword("Password does not match!");
+            } else {
+                setConfirmPassword("");
+            }
+        } else {
+            if (confirmPassword.length > 0) {
+                setConfirmPassword("");
             }
         }
 
@@ -131,6 +145,12 @@ function ResetPassword() {
                             {
                                 blank.confirm !== "" && submit ? 
                                 <Error error={blank.confirm} /> :
+                                undefined
+                            }
+
+                            {
+                                confirmPassword.length > 0 && submit ?
+                                <Error error={confirmPassword} /> :
                                 undefined
                             }
                         </AnimatePresence>
