@@ -1,9 +1,14 @@
+"use client"
+
 import Address from "../../../public/address.svg"
 import Email from "../../../public/gmail.svg"
 import Phone from "../../../public/phone.svg"
 import "./Info.css"
 import Image from "next/image"
 import { Work_Sans } from "next/font/google";
+import { useState, useEffect } from "react"
+import Error from "../error message/Error"
+import { AnimatePresence } from "framer-motion"
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -12,6 +17,73 @@ const workSans = Work_Sans({
 });
 
 function Info() {
+    const [formData, setFormData] = useState({
+        first: "",
+        last: "",
+        email: "",
+        title: "",
+        description: "",
+    })
+
+    const [blank, setBlank] = useState({
+        name: "",
+        email: "",
+        title: "",
+        description: "",
+    });
+
+    const [submit, setSubmit] = useState(false);
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        setSubmit(true);
+
+        const fromEmail = Object.fromEntries(
+                            Object.entries(formData).slice(
+                                Object.keys(formData).indexOf("email")
+                            )
+                          );
+        const blankError = {
+            name: "",
+            email: "",
+            title: "",
+            description: "",
+        }
+        
+        if (formData.first === "" || formData.last === "") {
+            blankError.name = "Two name field must be filled";
+        }
+
+        for (const key in fromEmail) {
+            if (formData[key].trim() === "") {
+                blankError[key] = "Required!";
+            }
+        }
+
+        setBlank(blankError);
+    }
+
+    useEffect(() => {
+        const tempBlank = {...blank};
+        const formEmail = Object.fromEntries(
+                            Object.entries(formData).slice(
+                                Object.keys(formData).indexOf("email")
+                            )
+                          );
+        
+        if (formData.first.trim() !== "" && formData.last.trim() !== "" && tempBlank.name !== "") {
+            tempBlank.name = "";
+        }
+
+        for (const key in formEmail) {
+            if (formData[key].trim() !== "" && tempBlank[key] !== "") {
+                tempBlank[key] = "";
+            }
+        }
+
+        setBlank(tempBlank);
+    }, [formData]);
+
     return (
         <section className="w-[80%] mx-auto py-20 flex justify-between gap-5" id="info-section">
             <div className="flex flex-col gap-5 w-[35%]" id="left">
@@ -58,31 +130,66 @@ function Info() {
                 </div>
             </div>
 
-            <form className="flex flex-col gap-5 w-[65%] p-10 bg-[#F1F4F1] h-fit" id="right">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-5 w-[65%] p-10 bg-[#F1F4F1] h-fit" id="right">
+                <div className="flex justify-between">
                     <label className={`text-base contact-info text-[#424b4a] font-bold ${workSans.className}`}>Name <span className="text-[red]">*</span></label>
-                    <div className="flex justify-between" id="name-section">
-                        <div className="flex flex-col gap-2 w-[45%] name-detail">
-                            <input type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
-                            <label className={`text-xs text-[#424b4a] font-normal ${workSans.className}`}>First</label>
-                        </div>
-
-                        <div className="flex flex-col gap-2 w-[45%] name-detail">
-                            <input type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
-                            <label className={`text-xs text-[#424b4a] font-normal ${workSans.className}`}>Last</label>
-                        </div>
+                    <AnimatePresence mode="wait">
+                        {
+                            blank.name.length > 0 && submit ?
+                            <Error error={blank.name} /> :
+                            undefined
+                        }
+                    </AnimatePresence>
+                </div>
+                <div className="flex justify-between" id="name-section">
+                    <div className="flex flex-col gap-2 w-[45%] name-detail">
+                        <input onInput={(e) => setFormData({...formData, first: e.target.value})} type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
+                        <label className={`text-xs text-[#424b4a] font-normal ${workSans.className}`}>First</label>
                     </div>
+                    <div className="flex flex-col gap-2 w-[45%] name-detail">
+                        <input onInput={(e) => setFormData({...formData, last: e.target.value})} type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
+                        <label className={`text-xs text-[#424b4a] font-normal ${workSans.className}`}>Last</label>
+                    </div>
+                </div>
 
+                <div className="flex justify-between">
                     <label className={`text-base contact-info text-[#424b4a] font-bold ${workSans.className}`}>Email <span className="text-[red]">*</span></label>
-                    <input type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
-
+                    <AnimatePresence mode="wait">
+                        {
+                            blank.email.length > 0 && submit ? 
+                            <Error error={blank.email} /> :
+                            undefined
+                        }
+                    </AnimatePresence>
+                </div>
+                <input onInput={(e) => setFormData({...formData, email: e.target.value})} type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
+                
+                <div className="flex justify-between">
                     <label className={`text-base contact-info text-[#424b4a] font-bold ${workSans.className}`}>Title <span className="text-[red]">*</span></label>
-                    <input type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
+                    <AnimatePresence mode="wait">
+                        {
+                            blank.title.length > 0 && submit ?
+                            <Error error={blank.title} /> :
+                            undefined
+                        }
+                    </AnimatePresence>
+                </div>
+                <input onInput={(e) => setFormData({...formData, title: e.target.value})} type="text" className={`bg-[white] h-[50px] px-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></input>
 
+                <div className="flex justify-between">
                     <label className={`text-base contact-info text-[#424b4a] font-bold ${workSans.className}`}>Description <span className="text-[red]">*</span></label>
-                    <textarea className={`bg-[white] h-[120px] px-3 py-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></textarea>
+                    <AnimatePresence mode="wait">
+                        {
+                            blank.description.length > 0 && submit ?
+                            <Error error={blank.description} /> :
+                            undefined
+                        }
+                    </AnimatePresence>
+                </div>
+                <textarea onChange={(e) => setFormData({...formData, description: e.target.value})} className={`bg-[white] h-[120px] px-3 py-3 border border-gray-300 border-opacity-50 text-[#424b4a] font-normal ${workSans.className}`}></textarea>
 
-                    <button type="submit" className={`text-base w-fit py-3 px-5 text-center border banner-p text-[#C25C5C] border-[#C25C5C] font-medium ${workSans.className} hover:bg-[#C25C5C] hover:text-white delay-75 duration-300 flex justify-center items-center`} id="submit">SUBMIT</button>
-                </form>
+                <button type="submit" className={`text-base w-fit py-3 px-5 text-center border banner-p text-[#C25C5C] border-[#C25C5C] font-medium ${workSans.className} hover:bg-[#C25C5C] hover:text-white delay-75 duration-300 flex justify-center items-center`} id="submit">SUBMIT</button>
+            </form>
         </section>
     );
 }
