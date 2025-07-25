@@ -8,6 +8,7 @@ import Search_Bar from "../searches/Searches"
 import "./Shop.css"
 import Image from "next/image";
 import { Work_Sans } from "next/font/google";
+import ArrowUp from "../arrow up/ArrowUp";
 
 const workSans = Work_Sans({
   subsets: ["latin"],
@@ -108,6 +109,7 @@ function Shop() {
             <Pagination className="w-fit mx-auto mt-10 mb-10"/>
             
             <Footer />
+            <ArrowUp />
         </>
     );
 }

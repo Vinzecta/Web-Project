@@ -7,6 +7,7 @@ import Explore from "./Explore"
 import Goal from "./Goal"
 import Hero from "../hero/Hero"
 import Image from "next/image";
+import ArrowUp from "../arrow up/ArrowUp";
 
 function About() {
     const about_content = "At [Shop Name], we offer quality [products/services] with reliable service and fair prices. Proudly serving [your market or location], we're here to help you find what you need—quickly and easily."
@@ -21,6 +22,7 @@ function About() {
             <Goal/>
             <Hero />
             <Footer/>
+            <ArrowUp />
         </>
     );
 }

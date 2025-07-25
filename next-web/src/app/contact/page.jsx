@@ -4,6 +4,7 @@ import Banner from "../banner/Banner";
 import Image1 from "../../../public/image-1.jpg"
 import Info from "./Info";
 import Hero from "../hero/Hero";
+import ArrowUp from "../arrow up/ArrowUp";
 
 function Contact() {
     const title = "Contact Us!";
@@ -15,6 +16,7 @@ function Contact() {
             <Info/>
             <Hero/>
             <Footer/>
+            <ArrowUp />
         </>
     );
 }
