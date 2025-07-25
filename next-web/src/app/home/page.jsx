@@ -8,6 +8,7 @@ import Popular from "./Popular"
 import Review from "./Review"
 import Hero from "../hero/Hero"
 import "./Homepage.css"
+import ArrowUp from "../arrow up/ArrowUp"
 
 function Homepage() {
     const welcome = "WELCOME TO CERAMIC SHOP";
@@ -30,6 +31,8 @@ function Homepage() {
             <Review/>
             <Hero/>
             <Footer/>
+
+            <ArrowUp />
         </>
     );
 }
