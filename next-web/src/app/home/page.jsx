@@ -11,7 +11,7 @@ import "./Homepage.css"
 import ArrowUp from "../arrow up/ArrowUp"
 
 function Homepage() {
-    const welcome = "WELCOME TO CERAMIC SHOP";
+    const welcome = "WELCOME TO DUC LOI";
     const title = "Elevate Your Space with Ceramic Elegance";
     const content = "Starting from just $149.00";
     const button = "SHOP NOW!";

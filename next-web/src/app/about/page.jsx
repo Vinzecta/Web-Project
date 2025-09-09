@@ -10,7 +10,7 @@ import Image from "next/image";
 import ArrowUp from "../arrow up/ArrowUp";
 
 function About() {
-    const about_content = "At [Shop Name], we offer quality [products/services] with reliable service and fair prices. Proudly serving [your market or location], we're here to help you find what you need—quickly and easily."
+    const about_content = "At Duc Loi, we offer quality [products/services] with reliable service and fair prices. Proudly serving [your market or location], we're here to help you find what you need—quickly and easily."
     return (
         <>
             <Header/>

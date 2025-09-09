@@ -43,7 +43,7 @@ function Header() {
         <>
             <header className="w-full bg-[#C25C5C]">
                 <nav className="w-[80%] flex justify-between mx-auto">
-                    <Link href="/home" className="text-2xl h-fit my-auto font-medium text-white hover:scale-120 transition-transform duration-300" id="shop-name">ShopName</Link>
+                    <Link href="/home" className="text-2xl h-fit my-auto font-medium text-white hover:scale-120 transition-transform duration-300" id="shop-name">Duc Loi</Link>
 
                     <div className="flex w-fit" id="navigation">
                         <Link href="/home" className="text-base px-5 py-10 text-white font-sans font-normal hover:scale-120 transition-transform duration-300">HOME</Link>
